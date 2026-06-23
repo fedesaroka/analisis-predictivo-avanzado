@@ -1,6 +1,8 @@
 # TP2 - Análisis Predictivo Avanzado
 ## Sistema de Recomendación de Anime
 
+🚀 **Demo:** [fedesaroka-analisis-predictivo-avanzado-app-a76w3e.streamlit.app](https://fedesaroka-analisis-predictivo-avanzado-app-a76w3e.streamlit.app/)
+
 ### Descripción del proyecto
 
 Trabajo Práctico 2 de la materia **Análisis Predictivo Avanzado**. El objetivo es construir un **sistema de recomendación** usando el dataset de Anime Recommendations Database de Kaggle.
