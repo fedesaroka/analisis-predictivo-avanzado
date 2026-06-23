@@ -1,6 +1,9 @@
 # Data files too large for GitHub (>100MB)
 data/rating.csv
 
+# Script temporal de conversion
+convert_parquet.py
+
 # Python
 __pycache__/
 *.py[cod]
