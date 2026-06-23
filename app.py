@@ -4,29 +4,23 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# ── Configuración de la página ──────────────────────────────────────────────
 st.set_page_config(
     page_title="Anime Recommender",
     page_icon="🎌",
     layout="wide"
 )
 
-# ── Carga y preparación de datos ─────────────────────────────────────────────
+# Cargamos datos y la matriz TF-IDF (liviana), pero NO la similarity matrix completa
 @st.cache_data
 def cargar_datos():
     anime = pd.read_csv("data/anime.csv")
     anime_cb = anime.dropna(subset=["genre"]).copy().reset_index(drop=True)
     anime_cb["genre_clean"] = anime_cb["genre"].str.replace(", ", " ").str.lower()
-    return anime, anime_cb
-
-@st.cache_data
-def calcular_similitudes(anime_cb):
     tfidf = TfidfVectorizer()
     genre_matrix = tfidf.fit_transform(anime_cb["genre_clean"])
-    similarity_matrix = cosine_similarity(genre_matrix, genre_matrix)
-    return similarity_matrix
+    return anime, anime_cb, genre_matrix
 
-def recomendar(nombre, anime_cb, similarity_matrix, n=10):
+def recomendar(nombre, anime_cb, genre_matrix, n=10):
     matches = anime_cb[anime_cb["name"].str.lower() == nombre.lower()]
     if matches.empty:
         matches = anime_cb[anime_cb["name"].str.lower().str.contains(nombre.lower(), na=False)]
@@ -36,7 +30,9 @@ def recomendar(nombre, anime_cb, similarity_matrix, n=10):
     idx = matches.index[0]
     anime_info = anime_cb.loc[idx]
 
-    sim_scores = list(enumerate(similarity_matrix[idx]))
+    # Calculamos similitud solo para el anime seleccionado (1 fila vs toda la matriz)
+    sim_vector = cosine_similarity(genre_matrix[idx], genre_matrix).flatten()
+    sim_scores = list(enumerate(sim_vector))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = [(i, s) for i, s in sim_scores if i != idx][:n]
 
@@ -54,8 +50,7 @@ def recomendar(nombre, anime_cb, similarity_matrix, n=10):
     return anime_info, resultado
 
 # ── Carga ────────────────────────────────────────────────────────────────────
-anime, anime_cb = cargar_datos()
-similarity_matrix = calcular_similitudes(anime_cb)
+anime, anime_cb, genre_matrix = cargar_datos()
 nombres = sorted(anime_cb["name"].dropna().unique().tolist())
 
 # ── UI ───────────────────────────────────────────────────────────────────────
@@ -83,17 +78,17 @@ with col2:
 st.divider()
 
 if seleccion:
-    anime_info, resultado = recomendar(seleccion, anime_cb, similarity_matrix, n=n_recs)
+    anime_info, resultado = recomendar(seleccion, anime_cb, genre_matrix, n=n_recs)
 
     if resultado is None:
         st.error(f'No se encontró "{seleccion}" en el dataset.')
     else:
-        # Info del anime seleccionado
         st.subheader(f"📺 {anime_info['name']}")
         cols = st.columns(4)
         cols[0].metric("Tipo", anime_info["type"] if pd.notna(anime_info["type"]) else "—")
         cols[1].metric("Rating", f"{anime_info['rating']:.2f}" if pd.notna(anime_info["rating"]) else "—")
-        cols[2].metric("Episodios", int(anime_info["episodes"]) if pd.notna(anime_info["episodes"]) and str(anime_info["episodes"]).isdigit() else "—")
+        ep = anime_info["episodes"]
+        cols[2].metric("Episodios", int(float(ep)) if pd.notna(ep) and str(ep).replace('.','').isdigit() else "—")
         cols[3].metric("Miembros", f"{int(anime_info['members']):,}" if pd.notna(anime_info["members"]) else "—")
         st.caption(f"**Géneros:** {anime_info['genre']}")
 
@@ -101,15 +96,13 @@ if seleccion:
         st.subheader(f"Top {n_recs} recomendaciones")
         st.dataframe(resultado, width='stretch')
 
-        # Gráfico de similitudes
         st.subheader("Similitud coseno de las recomendaciones")
         chart_data = resultado[["Anime", "Similitud"]].set_index("Anime")
-        st.bar_chart(chart_data, width='stretch')
+        st.bar_chart(chart_data)
 
 else:
     st.info("Seleccioná un anime arriba para ver recomendaciones.")
 
-    # Mostramos los más populares como pantalla de inicio
     st.subheader("🏆 Animes más populares del dataset")
     top_popular = (
         anime.dropna(subset=["members", "rating"])
