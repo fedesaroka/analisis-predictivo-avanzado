@@ -13,7 +13,9 @@ st.set_page_config(
 # Cargamos datos y la matriz TF-IDF (liviana), pero NO la similarity matrix completa
 @st.cache_data
 def cargar_datos():
+    import html
     anime = pd.read_csv("data/anime.csv")
+    anime["name"] = anime["name"].apply(lambda x: html.unescape(x) if isinstance(x, str) else x)
     anime_cb = anime.dropna(subset=["genre"]).copy().reset_index(drop=True)
     anime_cb["genre_clean"] = anime_cb["genre"].str.replace(", ", " ").str.lower()
     tfidf = TfidfVectorizer()
