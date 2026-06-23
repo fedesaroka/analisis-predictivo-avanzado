@@ -99,12 +99,12 @@ if seleccion:
 
         st.divider()
         st.subheader(f"Top {n_recs} recomendaciones")
-        st.dataframe(resultado, use_container_width=True)
+        st.dataframe(resultado, width='stretch')
 
         # Gráfico de similitudes
         st.subheader("Similitud coseno de las recomendaciones")
         chart_data = resultado[["Anime", "Similitud"]].set_index("Anime")
-        st.bar_chart(chart_data)
+        st.bar_chart(chart_data, width='stretch')
 
 else:
     st.info("Seleccioná un anime arriba para ver recomendaciones.")
@@ -119,4 +119,4 @@ else:
         .reset_index(drop=True)
     )
     top_popular.index += 1
-    st.dataframe(top_popular, use_container_width=True)
+    st.dataframe(top_popular, width='stretch')
