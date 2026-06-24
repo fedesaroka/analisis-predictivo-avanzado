@@ -1,0 +1,16 @@
+{
+  "source_model": "hybrid_warp_style",
+  "objective": "warp_style_hard_negative",
+  "use_metadata": true,
+  "latent_dim": 64,
+  "epochs": 10,
+  "batch_size": 4096,
+  "learning_rate": 0.00805038450527013,
+  "weight_decay": 2.3423849847112904e-06,
+  "metadata_weight": 0.25,
+  "max_sampled": 5,
+  "margin": 2.0,
+  "gradient_clip_norm": 5.0,
+  "scoring_user_batch_size": 128,
+  "seed": 42
+}

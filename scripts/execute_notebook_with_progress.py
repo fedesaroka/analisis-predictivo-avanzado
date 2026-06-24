@@ -107,7 +107,7 @@ def main() -> None:
     )
 
     executor = ProgressExecutePreprocessor(
-        timeout=1800,
+        timeout=7200,
         kernel_name="apa-tp2-final",
         allow_errors=False,
         record_timing=True,

@@ -1,0 +1,9 @@
+parameter,importance
+epochs,0.237368923953
+max_sampled,0.20016026371
+batch_size,0.198921744656
+weight_decay,0.181518525997
+learning_rate,0.0871865619507
+margin,0.0525893170015
+latent_dim,0.0310545601042
+metadata_weight,0.0112001026285

@@ -36,5 +36,45 @@
     "margin": 1.0,
     "gradient_clip_norm": 5.0,
     "scoring_user_batch_size": 128
+  },
+  "optuna_search": {
+    "sampler": "tpe",
+    "n_startup_trials": 5,
+    "latent_dim_choices": [
+      16,
+      32,
+      48,
+      64
+    ],
+    "epochs_choices": [
+      6,
+      8,
+      10
+    ],
+    "batch_size_choices": [
+      2048,
+      4096,
+      8192
+    ],
+    "learning_rate_min": 0.002,
+    "learning_rate_max": 0.03,
+    "weight_decay_min": 1e-08,
+    "weight_decay_max": 0.0001,
+    "metadata_weight_min": 0.25,
+    "metadata_weight_max": 2.0,
+    "metadata_weight_step": 0.25,
+    "negatives_per_positive_choices": [
+      1,
+      2,
+      4
+    ],
+    "max_sampled_choices": [
+      5,
+      10,
+      20
+    ],
+    "margin_min": 0.5,
+    "margin_max": 2.0,
+    "margin_step": 0.25
   }
 }
