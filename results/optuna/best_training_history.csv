@@ -1,0 +1,11 @@
+model,epoch,loss,completed_batches,loss_examples,violation_rate
+tuned_hybrid_warp_style,1,16.1412451459,22,89313,1
+tuned_hybrid_warp_style,2,12.3155077184,22,87867,0.983809747741
+tuned_hybrid_warp_style,3,12.5807511506,22,65681,0.735402461008
+tuned_hybrid_warp_style,4,13.4827817121,22,56260,0.629919496602
+tuned_hybrid_warp_style,5,12.3368219878,22,53080,0.594314377526
+tuned_hybrid_warp_style,6,11.8077882345,22,49531,0.554577721048
+tuned_hybrid_warp_style,7,11.5306636191,22,46393,0.519442858263
+tuned_hybrid_warp_style,8,11.2007049603,22,43207,0.483770559717
+tuned_hybrid_warp_style,9,10.7793181095,22,40664,0.455297661035
+tuned_hybrid_warp_style,10,10.4378030573,22,38366,0.429567924042

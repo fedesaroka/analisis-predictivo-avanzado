@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-06-24T04:40:18.643012+00:00",
+  "git_commit": "12064270d0912141ea4bf0da8875797b156c171f",
+  "deployment_requires_pytorch": false,
+  "model_name": "tuned_hybrid_warp_style",
+  "objective": "warp_style_hard_negative",
+  "cohort_split_sha256": "02a81cb1bbdf5e955469426444a2500443a4412217197821e4f66d3c71dec1bf",
+  "anime_sha256": "26c27b66120342544f19c9acb575e3dcbf37d46d1898ae57be3167eb0284a845",
+  "ratings_sha256": "5f70fd74327974c0c2c35159efba1a0a5634de139e09ff208fc5a165a2b711bb",
+  "n_users": 1498,
+  "n_items": 2438,
+  "latent_dim": 64,
+  "n_item_features": 49,
+  "seen_interactions": 99669,
+  "recommendation_k": 10,
+  "score_parity_max_abs_error": 1.9073486328125e-06,
+  "selected_parameters": {
+    "name": "tuned_hybrid_warp_style",
+    "objective": "warp_style_hard_negative",
+    "use_metadata": true,
+    "latent_dim": 64,
+    "epochs": 10,
+    "batch_size": 4096,
+    "learning_rate": 0.00805038450527013,
+    "weight_decay": 2.3423849847112904e-06,
+    "metadata_weight": 0.25,
+    "negatives_per_positive": 1,
+    "max_sampled": 5,
+    "margin": 2.0,
+    "gradient_clip_norm": 5.0,
+    "seed": 42
+  },
+  "selected_test_metrics": {
+    "model": "tuned_hybrid_warp_style",
+    "variant": "tuned_final",
+    "selected_before_test": true,
+    "precision_at_10": 0.11528704939919894,
+    "recall_at_10": 0.19608482474330186,
+    "ndcg_at_10": 0.1903784108848963,
+    "hit_rate_at_10": 0.6662216288384513,
+    "catalog_coverage_at_10": 0.36628383921246926,
+    "intra_list_diversity_at_10": 0.5935628411169842,
+    "sampled_auc": 0.9245148548824687,
+    "objective": "warp_style_hard_negative",
+    "latent_dim": 64.0,
+    "epochs": 10.0,
+    "final_train_loss": 10.54098488571795,
+    "parameter_count": 258977.0
+  },
+  "files": {
+    "model_components": {
+      "path": "model_components.npz",
+      "size_bytes": 1536435,
+      "sha256": "6088ab04b8980f5a0ce7e3bdf84dd180d4952d53b9f754b4051ade9f1a569178"
+    },
+    "seen_final": {
+      "path": "seen_final.npz",
+      "size_bytes": 151032,
+      "sha256": "fd0eb221318187d23fe6d461cb53464ec49ea55239a8650dc58a0f286f0af77f"
+    },
+    "item_features": {
+      "path": "item_features.npz",
+      "size_bytes": 15474,
+      "sha256": "a5c3d74374a8eae8c9050de572f4fc92a64c9d1dbe693d64886056e9a6a27698"
+    },
+    "anime_catalog": {
+      "path": "anime_catalog.parquet",
+      "size_bytes": 122014,
+      "sha256": "2499bf6642fbce2138072d01ea8f634758da05a2b666af161b4a557e107d0e77"
+    },
+    "final_recommendations": {
+      "path": "final_recommendations.npz",
+      "size_bytes": 25517,
+      "sha256": "0b3e8f12e415247b74e67723cb7d00f342010b389954ab15e94d0d260967cb4b"
+    },
+    "user_mapping": {
+      "path": "user_mapping.json",
+      "size_bytes": 46429,
+      "sha256": "892a6cb77db2e21ad6c93ee19c2e0c71b0bd655b343ad0615db76372379aed4f"
+    },
+    "item_mapping": {
+      "path": "item_mapping.json",
+      "size_bytes": 72709,
+      "sha256": "76dd997827146abd1f1bb7fe080fe393dfc668d7f531b4560e1b17c1e137ca43"
+    },
+    "feature_names": {
+      "path": "feature_names.json",
+      "size_bytes": 1895,
+      "sha256": "40c66233f58b87eb03a7ea02790b4e41700fdb2b77072216ddae4e384b2e8cea"
+    },
+    "demo_users": {
+      "path": "demo_users.json",
+      "size_bytes": 13606,
+      "sha256": "359adf7050d3cd54757831b8fe4dba1c8283a4d777a1f346805802d8725e61cb"
+    }
+  }
+}

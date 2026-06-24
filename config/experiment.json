@@ -1,0 +1,93 @@
+{
+  "experiment_name": "anime_hybrid_pytorch",
+  "framework": "pytorch",
+  "seed": 42,
+  "positive_rating_threshold": 8,
+  "target_user_count": 1500,
+  "minimum_user_positives_before_sampling": 20,
+  "maximum_user_positives_before_sampling": 300,
+  "minimum_user_positives_after_filtering": 15,
+  "minimum_item_users": 5,
+  "validation_fraction": 0.1,
+  "test_fraction": 0.1,
+  "recommendation_k": 10,
+  "optuna_trials": 15,
+  "device": "cpu",
+  "candidate_objectives": [
+    "logistic",
+    "bpr",
+    "warp_style_hard_negative"
+  ],
+  "item_metadata": [
+    "genre",
+    "type"
+  ],
+  "primary_metric": "precision_at_10",
+  "sampled_auc_negatives": 100,
+  "default_training": {
+    "latent_dim": 32,
+    "epochs": 8,
+    "batch_size": 4096,
+    "learning_rate": 0.01,
+    "weight_decay": 1e-06,
+    "metadata_weight": 1.0,
+    "negatives_per_positive": 1,
+    "max_sampled": 10,
+    "margin": 1.0,
+    "gradient_clip_norm": 5.0,
+    "scoring_user_batch_size": 128
+  },
+  "optuna_search": {
+    "sampler": "tpe",
+    "n_startup_trials": 5,
+    "latent_dim_choices": [
+      16,
+      32,
+      48,
+      64
+    ],
+    "epochs_choices": [
+      6,
+      8,
+      10
+    ],
+    "batch_size_choices": [
+      2048,
+      4096,
+      8192
+    ],
+    "learning_rate_min": 0.002,
+    "learning_rate_max": 0.03,
+    "weight_decay_min": 1e-08,
+    "weight_decay_max": 0.0001,
+    "metadata_weight_min": 0.25,
+    "metadata_weight_max": 2.0,
+    "metadata_weight_step": 0.25,
+    "negatives_per_positive_choices": [
+      1,
+      2,
+      4
+    ],
+    "max_sampled_choices": [
+      5,
+      10,
+      20
+    ],
+    "margin_min": 0.5,
+    "margin_max": 2.0,
+    "margin_step": 0.25
+  },
+  "final_evaluation": {
+    "training_data": "train_plus_validation",
+    "evaluation_data": "test",
+    "selected_model_source": "results/optuna/best_params.json",
+    "selection_locked_before_test": true,
+    "comparison_models": [
+      "popularity",
+      "content",
+      "default_hybrid_warp_style",
+      "tuned_hybrid_warp_style"
+    ],
+    "deployment_artifact_schema_version": 1
+  }
+}

@@ -1,0 +1,31 @@
+model,user_index,user_id,rank,item_index,anime_id,title,genre,type,validation_hit
+tuned_hybrid_warp_style,0,93,1,1799,14741,Chuunibyou demo Koi ga Shitai!,"Comedy, Drama, Romance, School, Slice of Life",TV,False
+tuned_hybrid_warp_style,0,93,2,2020,20031,D-Frag!,"Comedy, Game, School, Seinen",TV,False
+tuned_hybrid_warp_style,0,93,3,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,True
+tuned_hybrid_warp_style,0,93,4,1655,11617,High School DxD,"Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+tuned_hybrid_warp_style,0,93,5,1806,14813,Yahari Ore no Seishun Love Comedy wa Machigatteiru.,"Comedy, Drama, Romance, School",TV,False
+tuned_hybrid_warp_style,0,93,6,1826,15315,Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?,"Comedy, Fantasy, Supernatural",TV,False
+tuned_hybrid_warp_style,0,93,7,2032,20507,Noragami,"Action, Adventure, Shounen, Supernatural",TV,False
+tuned_hybrid_warp_style,0,93,8,1993,19221,"Ore no Nounai Sentakushi ga, Gakuen Love Comedy wo Zenryoku de Jama Shiteiru","Comedy, Romance, School",TV,False
+tuned_hybrid_warp_style,0,93,9,1825,15225,Hentai Ouji to Warawanai Neko.,"Comedy, Harem, Romance, School, Seinen, Supernatural",TV,False
+tuned_hybrid_warp_style,0,93,10,1844,15699,Haiyore! Nyaruko-san W,"Comedy, Parody, Sci-Fi",TV,False
+tuned_hybrid_warp_style,749,36560,1,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+tuned_hybrid_warp_style,749,36560,2,1269,6547,Angel Beats!,"Action, Comedy, Drama, School, Supernatural",TV,False
+tuned_hybrid_warp_style,749,36560,3,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+tuned_hybrid_warp_style,749,36560,4,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+tuned_hybrid_warp_style,749,36560,5,1628,11111,Another,"Horror, Mystery, School, Supernatural, Thriller",TV,False
+tuned_hybrid_warp_style,749,36560,6,1453,9253,Steins;Gate,"Sci-Fi, Thriller",TV,False
+tuned_hybrid_warp_style,749,36560,7,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+tuned_hybrid_warp_style,749,36560,8,1499,9919,Ao no Exorcist,"Action, Demons, Fantasy, Shounen, Supernatural",TV,False
+tuned_hybrid_warp_style,749,36560,9,1761,13601,Psycho-Pass,"Action, Police, Psychological, Sci-Fi",TV,False
+tuned_hybrid_warp_style,749,36560,10,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,True
+tuned_hybrid_warp_style,1497,73461,1,926,2993,Rosario to Vampire,"Comedy, Ecchi, Fantasy, Harem, Romance, School, Shounen, Vampire",TV,False
+tuned_hybrid_warp_style,1497,73461,2,82,121,Fullmetal Alchemist,"Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen",TV,False
+tuned_hybrid_warp_style,1497,73461,3,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+tuned_hybrid_warp_style,1497,73461,4,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,False
+tuned_hybrid_warp_style,1497,73461,5,462,849,Suzumiya Haruhi no Yuuutsu,"Comedy, Mystery, Parody, School, Sci-Fi, Slice of Life",TV,False
+tuned_hybrid_warp_style,1497,73461,6,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+tuned_hybrid_warp_style,1497,73461,7,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+tuned_hybrid_warp_style,1497,73461,8,1059,4181,Clannad: After Story,"Drama, Fantasy, Romance, Slice of Life, Supernatural",TV,False
+tuned_hybrid_warp_style,1497,73461,9,1065,4214,Rosario to Vampire Capu2,"Comedy, Ecchi, Fantasy, Harem, Romance, School, Vampire",TV,False
+tuned_hybrid_warp_style,1497,73461,10,1014,3712,Zero no Tsukaima: Princesses no Rondo,"Action, Adventure, Comedy, Ecchi, Fantasy, Harem, Magic, Romance, School",TV,True

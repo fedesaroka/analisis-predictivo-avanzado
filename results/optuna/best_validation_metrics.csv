@@ -1,0 +1,2 @@
+model,source_model,objective,uses_metadata,selected_trial_number,parameter_count,final_train_loss,precision_at_10,recall_at_10,ndcg_at_10,hit_rate_at_10,catalog_coverage_at_10,intra_list_diversity_at_10,sampled_auc
+tuned_hybrid_warp_style,hybrid_warp_style,warp_style_hard_negative,True,2,258977,10.4378030573,0.09826435247,0.180062578453,0.164174426191,0.634178905207,0.341263330599,0.590492546499,0.919925287055

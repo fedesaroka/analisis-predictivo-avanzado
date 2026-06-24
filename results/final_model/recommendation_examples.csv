@@ -1,0 +1,51 @@
+user_index,user_id,positive_history_count,rank,item_index,anime_id,title,genre,type,test_hit
+1063,52496,16,1,145,205,Samurai Champloo,"Action, Adventure, Comedy, Historical, Samurai, Shounen",TV,False
+1063,52496,16,2,0,1,Cowboy Bebop,"Action, Adventure, Comedy, Drama, Sci-Fi, Space",TV,False
+1063,52496,16,3,23,45,Rurouni Kenshin: Meiji Kenkaku Romantan,"Action, Adventure, Comedy, Historical, Romance, Samurai",TV,False
+1063,52496,16,4,22,44,Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen,"Action, Drama, Historical, Martial Arts, Romance, Samurai",OVA,False
+1063,52496,16,5,118,166,Samurai 7,"Historical, Mecha, Samurai, Sci-Fi",TV,False
+1063,52496,16,6,305,467,Ghost in the Shell: Stand Alone Complex,"Action, Mecha, Military, Police, Sci-Fi, Seinen",TV,False
+1063,52496,16,7,97,139,Hunter x Hunter: Greed Island Final,"Action, Adventure, Shounen, Super Power",OVA,False
+1063,52496,16,8,20,33,Berserk,"Action, Adventure, Demons, Drama, Fantasy, Horror, Military, Romance, Seinen, Supernatural",TV,False
+1063,52496,16,9,278,430,Fullmetal Alchemist: The Conqueror of Shamballa,"Comedy, Drama, Fantasy, Historical, Military, Shounen",Movie,False
+1063,52496,16,10,46,72,Full Metal Panic? Fumoffu,"Action, Comedy, School",TV,False
+154,7562,30,1,9,20,Naruto,"Action, Comedy, Martial Arts, Shounen, Super Power",TV,False
+154,7562,30,2,134,189,Love Hina,"Comedy, Ecchi, Harem, Romance, Shounen, Slice of Life",TV,False
+154,7562,30,3,248,384,Gantz,"Action, Drama, Horror, Psychological, Sci-Fi, Supernatural",TV,True
+154,7562,30,4,45,71,Full Metal Panic!,"Action, Comedy, Mecha, Military, Sci-Fi",TV,False
+154,7562,30,5,242,376,Elfen Lied Special,"Drama, Ecchi, Horror, Psychological, Supernatural",Special,False
+154,7562,30,6,468,857,Air Gear,"Action, Comedy, Ecchi, Shounen, Sports",TV,False
+154,7562,30,7,156,225,Dragon Ball GT,"Action, Adventure, Comedy, Fantasy, Magic, Sci-Fi, Shounen, Super Power",TV,False
+154,7562,30,8,1376,8074,Highschool of the Dead,"Action, Ecchi, Horror, Supernatural",TV,False
+154,7562,30,9,278,430,Fullmetal Alchemist: The Conqueror of Shamballa,"Comedy, Drama, Fantasy, Historical, Military, Shounen",Movie,False
+154,7562,30,10,499,899,Dragon Ball Z Movie 06: Gekitotsu!! 100-oku Power no Senshi-tachi,"Adventure, Comedy, Fantasy, Sci-Fi, Shounen",Movie,False
+901,44465,49,1,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+901,44465,49,2,1880,16498,Shingeki no Kyojin,"Action, Drama, Fantasy, Shounen, Super Power",TV,False
+901,44465,49,3,9,20,Naruto,"Action, Comedy, Martial Arts, Shounen, Super Power",TV,True
+901,44465,49,4,1666,11757,Sword Art Online,"Action, Adventure, Fantasy, Game, Romance",TV,False
+901,44465,49,5,157,226,Elfen Lied,"Action, Drama, Horror, Psychological, Romance, Seinen, Supernatural",TV,False
+901,44465,49,6,1669,11771,Kuroko no Basket,"Comedy, School, Shounen, Sports",TV,False
+901,44465,49,7,143,199,Sen to Chihiro no Kamikakushi,"Adventure, Drama, Supernatural",Movie,False
+901,44465,49,8,0,1,Cowboy Bebop,"Action, Adventure, Comedy, Drama, Sci-Fi, Space",TV,False
+901,44465,49,9,465,853,Ouran Koukou Host Club,"Comedy, Harem, Romance, School, Shoujo",TV,False
+901,44465,49,10,761,1818,Claymore,"Action, Adventure, Demons, Fantasy, Shounen, Super Power, Supernatural",TV,False
+597,30176,87,1,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+597,30176,87,2,798,2001,Tengen Toppa Gurren Lagann,"Action, Adventure, Comedy, Mecha, Sci-Fi",TV,False
+597,30176,87,3,165,237,Eureka Seven,"Adventure, Drama, Mecha, Romance, Sci-Fi",TV,False
+597,30176,87,4,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+597,30176,87,5,1880,16498,Shingeki no Kyojin,"Action, Drama, Fantasy, Shounen, Super Power",TV,True
+597,30176,87,6,920,2966,Ookami to Koushinryou,"Adventure, Fantasy, Historical, Romance",TV,False
+597,30176,87,7,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,False
+597,30176,87,8,1165,5341,Ookami to Koushinryou II,"Adventure, Fantasy, Historical, Romance",TV,False
+597,30176,87,9,0,1,Cowboy Bebop,"Action, Adventure, Comedy, Drama, Sci-Fi, Space",TV,False
+597,30176,87,10,799,2002,Heroic Age,"Action, Mecha, Military, Sci-Fi, Space",TV,False
+386,19522,263,1,1251,6347,Baka to Test to Shoukanjuu,"Comedy, Romance, School, Super Power",TV,True
+386,19522,263,2,612,1195,Zero no Tsukaima,"Action, Adventure, Comedy, Ecchi, Fantasy, Harem, Magic, Romance, School",TV,True
+386,19522,263,3,1532,10110,Mayo Chiki!,"Comedy, Ecchi, Harem, Romance, School",TV,False
+386,19522,263,4,1805,14811,GJ-bu,"Comedy, School, Slice of Life",TV,False
+386,19522,263,5,980,3455,To LOVE-Ru,"Comedy, Ecchi, Harem, Romance, School, Sci-Fi",TV,True
+386,19522,263,6,1799,14741,Chuunibyou demo Koi ga Shitai!,"Comedy, Drama, Romance, School, Slice of Life",TV,True
+386,19522,263,7,1187,5680,K-On!,"Comedy, Music, School, Slice of Life",TV,True
+386,19522,263,8,1541,10165,Nichijou,"Comedy, School, Slice of Life",TV,False
+386,19522,263,9,1835,15451,High School DxD New,"Action, Comedy, Demons, Ecchi, Harem, Romance, School",TV,True
+386,19522,263,10,1825,15225,Hentai Ouji to Warawanai Neko.,"Comedy, Harem, Romance, School, Seinen, Supernatural",TV,False
