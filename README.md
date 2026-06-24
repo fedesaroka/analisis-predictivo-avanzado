@@ -2,7 +2,7 @@
 
 Trabajo Práctico 2 de **Análisis Predictivo Avanzado**.
 
-**Demo:** https://fedesaroka-analisis-predictivo-avanzado-app-a76w3e.streamlit.app/
+**Demo:** https://fedesaroka-analisis-predictivo-avanzado-app-xmct2f.streamlit.app/
 
 ## Objetivo
 
