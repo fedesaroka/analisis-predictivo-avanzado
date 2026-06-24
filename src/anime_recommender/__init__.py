@@ -30,10 +30,13 @@ from anime_recommender.features import (
 )
 from anime_recommender.inference import (
     DeploymentArtifacts,
+    build_content_profile,
     load_deployment_artifacts,
     recommend_all_known_users,
     recommend_known_user,
+    recommend_new_user,
     score_known_user,
+    score_new_user_content,
 )
 
 
@@ -41,6 +44,7 @@ __all__ = [
     "DeploymentArtifacts",
     "ItemFeatureData",
     "PreparedData",
+    "build_content_profile",
     "build_item_features",
     "content_score_matrix",
     "evaluate_baselines",
@@ -53,7 +57,9 @@ __all__ = [
     "rank_top_k",
     "recommend_all_known_users",
     "recommend_known_user",
+    "recommend_new_user",
     "recommendation_examples",
     "sampled_auc",
     "score_known_user",
+    "score_new_user_content",
 ]

@@ -1,4 +1,5 @@
-﻿streamlit==1.35.0
+﻿-e .
+streamlit==1.35.0
 numpy==1.26.4
 pandas==2.2.2
 scipy==1.11.4

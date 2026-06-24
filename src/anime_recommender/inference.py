@@ -1,4 +1,4 @@
-﻿"""NumPy-only inference for exported recommendation artifacts."""
+"""NumPy-only inference for exported recommendation artifacts."""
 
 from __future__ import annotations
 
@@ -423,3 +423,266 @@ def recommend_all_known_users(
         )
 
     return recommendations
+
+
+def _validated_favorite_indices(
+    favorite_item_indices: (
+        np.ndarray
+        | list[int]
+        | tuple[int, ...]
+    ),
+    n_items: int,
+) -> np.ndarray:
+    """Normalize and validate selected favorite item indices."""
+
+    indices = np.asarray(
+        favorite_item_indices,
+        dtype=np.int64,
+    ).reshape(-1)
+
+    if len(indices) == 0:
+        raise ValueError(
+            "At least one favorite item is required."
+        )
+
+    indices = np.unique(
+        indices
+    )
+
+    if np.any(
+        indices < 0
+    ) or np.any(
+        indices >= n_items
+    ):
+        raise IndexError(
+            "At least one favorite item index "
+            "is outside the catalog."
+        )
+
+    return indices
+
+
+def build_content_profile(
+    normalized_item_features: sparse.csr_matrix,
+    favorite_item_indices: (
+        np.ndarray
+        | list[int]
+        | tuple[int, ...]
+    ),
+) -> np.ndarray:
+    """Build one normalized content profile from favorite anime."""
+
+    feature_matrix = (
+        normalized_item_features
+        .astype(np.float32)
+        .tocsr()
+    )
+
+    favorite_indices = (
+        _validated_favorite_indices(
+            favorite_item_indices=(
+                favorite_item_indices
+            ),
+            n_items=feature_matrix.shape[0],
+        )
+    )
+
+    profile = np.asarray(
+        feature_matrix[
+            favorite_indices
+        ].mean(axis=0)
+    ).reshape(-1).astype(
+        np.float32,
+        copy=False,
+    )
+
+    profile_norm = float(
+        np.linalg.norm(
+            profile
+        )
+    )
+
+    if not np.isfinite(
+        profile_norm
+    ) or profile_norm <= 0:
+        raise RuntimeError(
+            "The selected favorites generated "
+            "an invalid content profile."
+        )
+
+    profile = (
+        profile
+        / profile_norm
+    ).astype(
+        np.float32,
+        copy=False,
+    )
+
+    if not np.isfinite(
+        profile
+    ).all():
+        raise RuntimeError(
+            "The content profile contains "
+            "non-finite values."
+        )
+
+    return profile
+
+
+def score_new_user_content(
+    normalized_item_features: sparse.csr_matrix,
+    favorite_item_indices: (
+        np.ndarray
+        | list[int]
+        | tuple[int, ...]
+    ),
+) -> np.ndarray:
+    """Score the catalog for a new user using cosine similarity."""
+
+    feature_matrix = (
+        normalized_item_features
+        .astype(np.float32)
+        .tocsr()
+    )
+
+    profile = build_content_profile(
+        normalized_item_features=(
+            feature_matrix
+        ),
+        favorite_item_indices=(
+            favorite_item_indices
+        ),
+    )
+
+    scores = np.asarray(
+        feature_matrix
+        @ profile
+    ).reshape(-1).astype(
+        np.float32,
+        copy=False,
+    )
+
+    scores = np.clip(
+        scores,
+        0.0,
+        1.0,
+    )
+
+    if not np.isfinite(
+        scores
+    ).all():
+        raise RuntimeError(
+            "Cold-start scoring generated "
+            "non-finite values."
+        )
+
+    return scores
+
+
+def recommend_new_user(
+    artifacts: DeploymentArtifacts,
+    normalized_item_features: sparse.csr_matrix,
+    favorite_item_indices: (
+        np.ndarray
+        | list[int]
+        | tuple[int, ...]
+    ),
+    k: int = 10,
+) -> pd.DataFrame:
+    """Recommend content-similar unseen titles to a new user."""
+
+    if k <= 0:
+        raise ValueError(
+            "k must be positive."
+        )
+
+    feature_matrix = (
+        normalized_item_features
+        .astype(np.float32)
+        .tocsr()
+    )
+
+    if feature_matrix.shape[0] != len(
+        artifacts.catalog
+    ):
+        raise ValueError(
+            "Feature rows do not match the "
+            "deployment catalog."
+        )
+
+    favorite_indices = (
+        _validated_favorite_indices(
+            favorite_item_indices=(
+                favorite_item_indices
+            ),
+            n_items=feature_matrix.shape[0],
+        )
+    )
+
+    scores = score_new_user_content(
+        normalized_item_features=(
+            feature_matrix
+        ),
+        favorite_item_indices=(
+            favorite_indices
+        ),
+    ).copy()
+
+    scores[
+        favorite_indices
+    ] = -np.inf
+
+    available_items = int(
+        np.isfinite(
+            scores
+        ).sum()
+    )
+
+    if available_items < k:
+        raise RuntimeError(
+            f"Only {available_items} candidate items "
+            "are available."
+        )
+
+    item_indices = np.arange(
+        len(scores),
+        dtype=np.int64,
+    )
+
+    ranking = np.lexsort(
+        (
+            item_indices,
+            -scores,
+        )
+    )[:k]
+
+    recommendations = (
+        artifacts.catalog
+        .loc[
+            ranking
+        ]
+        .copy()
+    )
+
+    recommendations.insert(
+        0,
+        "rank",
+        np.arange(
+            1,
+            k + 1,
+            dtype=np.int64,
+        ),
+    )
+
+    recommendations.insert(
+        1,
+        "similarity",
+        scores[
+            ranking
+        ],
+    )
+
+    return recommendations.reset_index(
+        drop=True
+    )
+
