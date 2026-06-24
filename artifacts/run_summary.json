@@ -1,0 +1,15 @@
+{
+  "n_users": 1499,
+  "n_items": 2451,
+  "n_positive_interactions": 110204,
+  "positive_definition": "explicit rating >= 8",
+  "best_params": {
+    "dim": 16,
+    "lr": 0.012022643665771555,
+    "reg": 2.3345864076016238e-06,
+    "epochs": 7,
+    "max_sampled": 8,
+    "dropout": 0.0046450412719997725
+  },
+  "runtime_seconds": 19.935657262802124
+}

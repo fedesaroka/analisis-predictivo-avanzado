@@ -1,93 +1,116 @@
-# TP2 - Análisis Predictivo Avanzado
-## Sistema de Recomendación de Anime
+# TP2 — Sistema híbrido de recomendación de anime
 
-🚀 **Demo:** [fedesaroka-analisis-predictivo-avanzado-app-a76w3e.streamlit.app](https://fedesaroka-analisis-predictivo-avanzado-app-a76w3e.streamlit.app/)
+Trabajo Práctico 2 de **Análisis Predictivo Avanzado**. El proyecto construye y despliega un sistema de recomendación top-k para una plataforma hipotética de streaming de anime.
 
-### Descripción del proyecto
+## Problema de negocio
 
-Trabajo Práctico 2 de la materia **Análisis Predictivo Avanzado**. El objetivo es construir un **sistema de recomendación** usando el dataset de Anime Recommendations Database de Kaggle.
+El catálogo contiene miles de títulos y una política única de popularidad ofrece la misma experiencia a todos. El objetivo es ordenar los animes todavía no consumidos según la afinidad estimada de cada usuario, para facilitar el descubrimiento y apoyar métricas como reproducciones iniciadas, incorporaciones a la lista y retención.
 
-El problema de negocio es: dado el historial de ratings de un usuario, recomendar animes que probablemente le gusten.
+La aplicación desplegada contempla dos situaciones:
 
-**Fecha de presentación:** miércoles 24/6 a las 19hs.
+- **Usuario existente:** recomendaciones personalizadas a partir de su historial.
+- **Usuario nuevo:** fallback basado en géneros y tipo de sus títulos favoritos para resolver el cold start inicial.
 
----
+## Datos
 
-### Dataset
+Fuente: Anime Recommendations Database de Kaggle.
 
-Fuente: [Kaggle - Anime Recommendations Database](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database)
+- `data/anime.csv`: metadata de 12.294 animes.
+- `data/rating.parquet`: 7.813.737 interacciones de usuarios.
+- `rating = -1`: visto sin rating explícito.
+- Señal positiva del modelo: rating explícito mayor o igual a 8.
 
-#### `data/anime.csv`
-Información de cada anime. Columnas:
-- `anime_id`: ID único del anime
-- `name`: nombre del anime
-- `genre`: géneros separados por coma (ej: "Action, Comedy, Drama")
-- `type`: formato (TV, Movie, OVA, etc.)
-- `episodes`: cantidad de episodios
-- `rating`: rating promedio del anime (escala 1-10)
-- `members`: cantidad de usuarios que tienen el anime en su lista
+Para conservar historias coherentes se muestrean usuarios y se mantienen todas sus interacciones positivas. La cohorte final contiene:
 
-#### `data/rating.parquet`
-Ratings individuales de usuarios. Originalmente `rating.csv` (106 MB), convertido a Parquet (17.5 MB) para poder subir al repo. Columnas:
-- `user_id`: ID del usuario
-- `anime_id`: ID del anime
-- `rating`: rating dado por el usuario (-1 si lo vio pero no lo rateó, 1-10 si lo rateó)
+- 1.499 usuarios activos.
+- 2.451 animes.
+- 110.204 interacciones positivas.
 
-> **Nota:** el archivo original `rating.csv` está excluido del repo por superar el límite de GitHub (100 MB). Para leerlo usar `pd.read_parquet('data/rating.parquet')`.
+## Metodología
 
----
+El notebook compara:
 
-### Estructura del repo
+1. Baseline de popularidad.
+2. Baseline basado en contenido.
+3. Factorización colaborativa con pérdida logística, BPR y WARP-style.
+4. Factorización híbrida con embeddings de usuario, anime, género y tipo.
+5. Modelo híbrido WARP-style optimizado con Optuna mediante TPE.
 
-```
-TP2 APA/
+La partición se hace dentro de cada usuario en entrenamiento, validación y test. El test permanece reservado hasta seleccionar arquitectura e hiperparámetros.
+
+La implementación reproduce la idea central de LightFM —sumar representaciones latentes de identidad y metadata— mediante PyTorch. Esta decisión evita los problemas de compilación de LightFM en versiones nuevas de Python y mantiene explícita la lógica del modelo.
+
+## Resultado final
+
+Resultados sobre el test reservado:
+
+| Modelo | Precision@10 | Recall@10 | AUC | Coverage@10 | Diversity@10 |
+|---|---:|---:|---:|---:|---:|
+| Popularidad | 0,059 | 0,093 | 0,814 | 0,018 | 0,818 |
+| Contenido | 0,014 | 0,024 | 0,689 | 0,299 | 0,397 |
+| Híbrido WARP-style sin tuning | 0,128 | 0,201 | 0,905 | 0,345 | 0,785 |
+| **Híbrido WARP-style optimizado** | **0,133** | **0,207** | **0,901** | **0,220** | **0,781** |
+
+El modelo final mejora Precision@10 aproximadamente **126 %** frente al baseline de popularidad.
+
+## Estructura principal
+
+```text
+.
+├── app.py
+├── requirements.txt
+├── requirements-notebook.txt
 ├── data/
-│   ├── anime.csv           # metadata de animes
-│   └── rating.parquet      # ratings de usuarios (7.8M filas)
-├── C09 - SR1/              # Clase 9: Sistemas de Recomendación (parte 1)
-│   └── C09.ipynb
-├── C10 - SR2/              # Clase 10: Sistemas de Recomendación (parte 2)
-│   ├── C10.ipynb
-│   ├── C10_solución.ipynb
-│   └── Data/               # datasets usados en clase (movies y books)
-├── notebooks/              # notebooks del TP
-│   └── 01_analisis_descriptivo.ipynb
-├── Consigna TP2.docx       # consigna oficial
-└── README.md
+│   ├── anime.csv
+│   └── rating.parquet
+├── artifacts/
+│   ├── hybrid_model.npz
+│   ├── item_features.npy
+│   ├── seen_interactions.npz
+│   ├── anime_deploy.parquet
+│   ├── demo_users.json
+│   ├── model_results.csv
+│   └── optuna_trials.csv
+└── notebooks/
+    └── TP2_sistema_recomendacion_anime.ipynb
 ```
 
----
+## Ejecutar el notebook
 
-### Consigna (resumen)
-
-Entregar:
-1. **PPT** con:
-   - Introducción y problema de negocio
-   - Desarrollo: técnicas de ML y técnicas específicas de la materia (sistema de recomendación)
-   - **Deploy obligatorio** del modelo en alguna nube
-   - Conclusiones y acciones de negocio hipotéticas
-2. **Notebook** funcional, bien comentada, que corra de principio a fin y esté alineada a la PPT
-
----
-
-### Cómo correr el proyecto
+Se recomienda Python 3.11 o 3.12.
 
 ```bash
-# Instalar dependencias
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter pyarrow
+python -m venv .venv
 
-# Abrir Jupyter
-jupyter notebook
+# Windows
+.venv\Scripts\activate
+
+# macOS / Linux
+source .venv/bin/activate
+
+pip install -r requirements-notebook.txt
+jupyter notebook notebooks/TP2_sistema_recomendacion_anime.ipynb
 ```
 
-Los notebooks están en la carpeta `notebooks/`, correrlos en orden numérico.
+El notebook detecta si se ejecuta desde la raíz o desde `notebooks/` y guarda los artefactos en `artifacts/`.
 
----
+## Ejecutar la aplicación
 
-### Contexto para Claude
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-- El dataset tiene **7.8 millones de ratings** de usuarios sobre animes, más metadata de los animes (género, tipo, rating promedio, miembros).
-- El enfoque es **sistema de recomendación** (Collaborative Filtering y/o Content-Based).
-- Los ratings `-1` en `rating.parquet` indican que el usuario vio el anime pero no lo rateó explícitamente.
-- Las clases de referencia están en `C09 - SR1/` y `C10 - SR2/` con ejemplos de sistemas de recomendación sobre datasets de películas y libros.
-- La presentación es el **24/6** así que los tiempos son ajustados.
+El deployment no entrena el modelo. Carga representaciones y metadata ya exportadas, por lo que su ejecución es liviana.
+
+## Deployment
+
+Demo en Streamlit Community Cloud:
+
+`https://fedesaroka-analisis-predictivo-avanzado-app-a76w3e.streamlit.app/`
+
+El deployment público se actualizará al hacer push de esta versión a la rama configurada en Streamlit.
+
+## Limitaciones
+
+El dataset no contiene timestamps, por lo que la separación es aleatoria dentro de cada usuario y no temporal. Los resultados son offline y deben validarse con un experimento A/B antes de atribuir impacto comercial. La definición de positivo también debería revisarse con datos reales de consumo y objetivos del producto.

@@ -1,0 +1,68 @@
+[
+  {
+    "user_id": 33871,
+    "favorites": [
+      "Fullmetal Alchemist: Brotherhood",
+      "Steins;Gate",
+      "Gintama'",
+      "Gintama': Enchousen",
+      "Gintama Movie: Kanketsu-hen - Yorozuya yo Eien Nare"
+    ],
+    "recommendations": [
+      "Higashi no Eden",
+      "Elfen Lied",
+      "Summer Wars",
+      "Fate/stay night",
+      "Mirai Nikki (TV)",
+      "Katanagatari",
+      "Hachimitsu to Clover",
+      "xxxHOLiC",
+      "Kami nomi zo Shiru Sekai",
+      "Claymore"
+    ]
+  },
+  {
+    "user_id": 1019,
+    "favorites": [
+      "Fullmetal Alchemist: Brotherhood",
+      "Gintama°",
+      "Steins;Gate",
+      "Gintama'",
+      "Haikyuu!!: Karasuno Koukou VS Shiratorizawa Gakuen Koukou"
+    ],
+    "recommendations": [
+      "Shigatsu wa Kimi no Uso",
+      "Chuunibyou demo Koi ga Shitai!",
+      "Death Parade",
+      "Tonari no Kaibutsu-kun",
+      "Toradora!",
+      "Akame ga Kill!",
+      "Amagi Brilliant Park",
+      "Magi: The Labyrinth of Magic",
+      "Accel World",
+      "Guilty Crown"
+    ]
+  },
+  {
+    "user_id": 62481,
+    "favorites": [
+      "Fullmetal Alchemist: Brotherhood",
+      "Steins;Gate",
+      "Clannad: After Story",
+      "Code Geass: Hangyaku no Lelouch R2",
+      "Sen to Chihiro no Kamikakushi"
+    ],
+    "recommendations": [
+      "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
+      "Hyouka",
+      "Black Lagoon: The Second Barrage",
+      "Mirai Nikki (TV)",
+      "Tengen Toppa Gurren Lagann",
+      "Death Note",
+      "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
+      "Higurashi no Naku Koro ni",
+      "Steins;Gate: Oukoubakko no Poriomania",
+      "Elfen Lied"
+    ]
+  }
+]

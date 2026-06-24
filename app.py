@@ -1,117 +1,208 @@
-import streamlit as st
-import pandas as pd
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
 import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+import pandas as pd
+import streamlit as st
+from scipy import sparse
+
+ROOT = Path(__file__).resolve().parent
+ART = ROOT / "artifacts"
 
 st.set_page_config(
     page_title="Anime Recommender",
     page_icon="🎌",
-    layout="wide"
+    layout="wide",
 )
 
-# Cargamos datos y la matriz TF-IDF (liviana), pero NO la similarity matrix completa
-@st.cache_data
-def cargar_datos():
-    import html
-    anime = pd.read_csv("data/anime.csv")
-    anime["name"] = anime["name"].apply(lambda x: html.unescape(x) if isinstance(x, str) else x)
-    anime_cb = anime.dropna(subset=["genre"]).copy().reset_index(drop=True)
-    anime_cb["genre_clean"] = anime_cb["genre"].str.replace(", ", " ").str.lower()
-    tfidf = TfidfVectorizer()
-    genre_matrix = tfidf.fit_transform(anime_cb["genre_clean"])
-    return anime, anime_cb, genre_matrix
 
-def recomendar(nombre, anime_cb, genre_matrix, n=10):
-    matches = anime_cb[anime_cb["name"].str.lower() == nombre.lower()]
-    if matches.empty:
-        matches = anime_cb[anime_cb["name"].str.lower().str.contains(nombre.lower(), na=False)]
-    if matches.empty:
-        return None, None
+@st.cache_resource
+def load_artifacts():
+    model = np.load(ART / "hybrid_model.npz")
+    metadata = pd.read_parquet(ART / "anime_deploy.parquet")
+    item_features = np.load(ART / "item_features.npy")
+    seen = sparse.load_npz(ART / "seen_interactions.npz").tocsr()
+    demo_users = json.loads((ART / "demo_users.json").read_text(encoding="utf-8"))
 
-    idx = matches.index[0]
-    anime_info = anime_cb.loc[idx]
+    title_to_idx = dict(zip(metadata["name"], metadata["item_idx"]))
+    return {
+        "user_repr": model["user_repr"],
+        "item_repr": model["item_repr"],
+        "user_bias": model["user_bias"],
+        "item_bias": model["item_bias"],
+        "user_ids": model["user_ids"],
+        "item_ids": model["item_ids"],
+        "metadata": metadata,
+        "item_features": item_features,
+        "seen": seen,
+        "demo_users": demo_users,
+        "title_to_idx": title_to_idx,
+    }
 
-    # Calculamos similitud solo para el anime seleccionado (1 fila vs toda la matriz)
-    sim_vector = cosine_similarity(genre_matrix[idx], genre_matrix).flatten()
-    sim_scores = list(enumerate(sim_vector))
-    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    sim_scores = [(i, s) for i, s in sim_scores if i != idx][:n]
 
-    indices = [i for i, _ in sim_scores]
-    scores  = [s for _, s in sim_scores]
+def rank_existing_user(data, user_idx: int, n: int) -> pd.DataFrame:
+    scores = (
+        data["user_repr"][user_idx] @ data["item_repr"].T
+        + data["user_bias"][user_idx]
+        + data["item_bias"]
+    ).astype(float)
 
-    resultado = anime_cb.iloc[indices][["name", "genre", "type", "rating", "members"]].copy()
-    resultado.insert(0, "Similitud", [round(s, 3) for s in scores])
-    resultado = resultado.rename(columns={
-        "name": "Anime", "genre": "Géneros",
-        "type": "Tipo", "rating": "Rating", "members": "Miembros"
-    })
-    resultado = resultado.reset_index(drop=True)
-    resultado.index += 1
-    return anime_info, resultado
+    start, end = data["seen"].indptr[user_idx : user_idx + 2]
+    scores[data["seen"].indices[start:end]] = -np.inf
 
-# ── Carga ────────────────────────────────────────────────────────────────────
-anime, anime_cb, genre_matrix = cargar_datos()
-nombres = sorted(anime_cb["name"].dropna().unique().tolist())
+    top = np.argpartition(scores, -n)[-n:]
+    top = top[np.argsort(scores[top])[::-1]]
 
-# ── UI ───────────────────────────────────────────────────────────────────────
-st.title("🎌 Sistema de Recomendación de Anime")
-st.markdown("**TP2 — Análisis Predictivo Avanzado** | Content-Based Filtering (TF-IDF + Cosine Similarity)")
-st.divider()
-
-col1, col2 = st.columns([2, 1])
-
-with col1:
-    seleccion = st.selectbox(
-        "Buscá un anime:",
-        options=[""] + nombres,
-        index=0,
-        placeholder="Escribí para filtrar..."
+    result = data["metadata"].iloc[top][
+        ["name", "genre", "type", "rating", "members"]
+    ].copy()
+    result.insert(0, "Score", np.round(scores[top], 3))
+    result = result.rename(
+        columns={
+            "name": "Anime",
+            "genre": "Géneros",
+            "type": "Tipo",
+            "rating": "Rating medio",
+            "members": "Miembros",
+        }
     )
-    n_recs = st.slider("Cantidad de recomendaciones", min_value=5, max_value=20, value=10)
+    result.index = np.arange(1, len(result) + 1)
+    return result
 
-with col2:
-    st.markdown("### Estadísticas del dataset")
-    st.metric("Animes totales", f"{len(anime):,}")
-    st.metric("Con género definido", f"{len(anime_cb):,}")
-    st.metric("Géneros únicos", anime_cb["genre"].str.split(", ").explode().nunique())
+
+def shared_genres(selected_genres: set[str], candidate: str) -> str:
+    candidate_genres = set(str(candidate).split(", "))
+    overlap = sorted(selected_genres & candidate_genres)
+    return ", ".join(overlap) if overlap else "Afinidad general de perfil"
+
+
+def rank_new_user(data, favorites: list[str], n: int) -> pd.DataFrame:
+    idx = np.array([data["title_to_idx"][title] for title in favorites], dtype=int)
+    profile = data["item_features"][idx].mean(axis=0)
+    norm = np.linalg.norm(profile)
+    if norm > 0:
+        profile = profile / norm
+
+    similarity = data["item_features"] @ profile
+
+    # Small popularity tie-breaker. Similarity remains the dominant signal.
+    members = np.log1p(data["metadata"]["members"].fillna(0).to_numpy(dtype=float))
+    members = (members - members.min()) / max(1e-12, members.max() - members.min())
+    scores = similarity + 0.03 * members
+    scores[idx] = -np.inf
+
+    top = np.argpartition(scores, -n)[-n:]
+    top = top[np.argsort(scores[top])[::-1]]
+
+    selected_genres: set[str] = set()
+    for genre_text in data["metadata"].iloc[idx]["genre"]:
+        selected_genres.update(str(genre_text).split(", "))
+
+    result = data["metadata"].iloc[top][
+        ["name", "genre", "type", "rating", "members"]
+    ].copy()
+    result.insert(0, "Afinidad", np.round(similarity[top], 3))
+    result.insert(
+        2,
+        "Por qué",
+        [shared_genres(selected_genres, g) for g in result["genre"]],
+    )
+    result = result.rename(
+        columns={
+            "name": "Anime",
+            "genre": "Géneros",
+            "type": "Tipo",
+            "rating": "Rating medio",
+            "members": "Miembros",
+        }
+    )
+    result.index = np.arange(1, len(result) + 1)
+    return result
+
+
+data = load_artifacts()
+
+st.title("🎌 Sistema híbrido de recomendación de anime")
+st.markdown(
+    "**TP2 — Análisis Predictivo Avanzado** · "
+    "Factorización híbrida tipo LightFM + fallback basado en contenido"
+)
+st.caption(
+    "El modelo fue entrenado offline. La aplicación carga representaciones compactas "
+    "y genera recomendaciones sin reentrenar en la nube."
+)
+
+col1, col2, col3 = st.columns(3)
+col1.metric("Usuarios modelados", f"{len(data['user_ids']):,}")
+col2.metric("Animes modelados", f"{len(data['item_ids']):,}")
+col3.metric("Features de contenido", f"{data['item_features'].shape[1]:,}")
 
 st.divider()
+known_tab, new_tab, method_tab = st.tabs(
+    ["Usuario existente", "Usuario nuevo", "Cómo funciona"]
+)
 
-if seleccion:
-    anime_info, resultado = recomendar(seleccion, anime_cb, genre_matrix, n=n_recs)
+with known_tab:
+    st.subheader("Recomendaciones personalizadas con historial")
+    labels = {
+        f"Usuario {entry['user_id']} · {entry['n_likes']} gustos positivos": entry
+        for entry in data["demo_users"]
+    }
+    selected_label = st.selectbox("Elegí un usuario de demostración", list(labels))
+    n_known = st.slider(
+        "Cantidad de recomendaciones", 5, 20, 10, key="known_count"
+    )
+    entry = labels[selected_label]
 
-    if resultado is None:
-        st.error(f'No se encontró "{seleccion}" en el dataset.')
+    st.markdown("**Algunos favoritos de su historial**")
+    st.write(" · ".join(entry["favorites"][:6]))
+
+    known_result = rank_existing_user(data, int(entry["user_idx"]), n_known)
+    st.markdown(f"**Top {n_known} animes no vistos**")
+    st.dataframe(known_result, width="stretch")
+
+with new_tab:
+    st.subheader("Onboarding para un usuario sin historial")
+    st.write(
+        "Seleccioná entre 3 y 5 animes favoritos. El sistema construye un perfil "
+        "de géneros y tipo de contenido para resolver el arranque en frío."
+    )
+
+    titles = data["metadata"].sort_values("members", ascending=False)["name"].tolist()
+    favorites = st.multiselect(
+        "Animes favoritos",
+        titles,
+        default=titles[:3],
+        max_selections=5,
+    )
+    n_new = st.slider("Cantidad de recomendaciones", 5, 20, 10, key="new_count")
+
+    if len(favorites) < 3:
+        st.info("Seleccioná al menos tres títulos para construir un perfil más estable.")
     else:
-        st.subheader(f"📺 {anime_info['name']}")
-        cols = st.columns(4)
-        cols[0].metric("Tipo", anime_info["type"] if pd.notna(anime_info["type"]) else "—")
-        cols[1].metric("Rating", f"{anime_info['rating']:.2f}" if pd.notna(anime_info["rating"]) else "—")
-        ep = anime_info["episodes"]
-        cols[2].metric("Episodios", int(float(ep)) if pd.notna(ep) and str(ep).replace('.','').isdigit() else "—")
-        cols[3].metric("Miembros", f"{int(anime_info['members']):,}" if pd.notna(anime_info["members"]) else "—")
-        st.caption(f"**Géneros:** {anime_info['genre']}")
+        new_result = rank_new_user(data, favorites, n_new)
+        st.markdown(f"**Top {n_new} recomendaciones de onboarding**")
+        st.dataframe(new_result, width="stretch")
 
-        st.divider()
-        st.subheader(f"Top {n_recs} recomendaciones")
-        st.dataframe(resultado, width='stretch')
+with method_tab:
+    st.subheader("Arquitectura del entregable")
+    st.markdown(
+        """
+        **Usuarios existentes.** El score combina un embedding del usuario, una
+        representación del anime formada por identidad más metadata, y sesgos de
+        usuario e ítem. Los títulos ya observados se excluyen antes de ordenar.
 
-        st.subheader("Similitud coseno de las recomendaciones")
-        chart_data = resultado[["Anime", "Similitud"]].set_index("Anime")
-        st.bar_chart(chart_data)
+        **Usuarios nuevos.** Como todavía no existe embedding personal, se promedian
+        las features de los títulos favoritos y se busca afinidad de contenido. Esta
+        rama funciona como estrategia de cold start.
 
-else:
-    st.info("Seleccioná un anime arriba para ver recomendaciones.")
-
-    st.subheader("🏆 Animes más populares del dataset")
-    top_popular = (
-        anime.dropna(subset=["members", "rating"])
-        .nlargest(10, "members")[["name", "genre", "type", "rating", "members"]]
-        .rename(columns={"name": "Anime", "genre": "Géneros", "type": "Tipo",
-                         "rating": "Rating", "members": "Miembros"})
-        .reset_index(drop=True)
+        **Validación.** El modelo se seleccionó con Precision@10 sobre un conjunto de
+        validación por usuario y se evaluó una sola vez sobre un test reservado.
+        """
     )
-    top_popular.index += 1
-    st.dataframe(top_popular, width='stretch')
+    st.info(
+        "El deployment demuestra el uso del modelo. En producción debería integrarse "
+        "con eventos de consumo, catálogo actualizado y un experimento A/B."
+    )
