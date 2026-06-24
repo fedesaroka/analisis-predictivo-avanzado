@@ -76,5 +76,18 @@
     "margin_min": 0.5,
     "margin_max": 2.0,
     "margin_step": 0.25
+  },
+  "final_evaluation": {
+    "training_data": "train_plus_validation",
+    "evaluation_data": "test",
+    "selected_model_source": "results/optuna/best_params.json",
+    "selection_locked_before_test": true,
+    "comparison_models": [
+      "popularity",
+      "content",
+      "default_hybrid_warp_style",
+      "tuned_hybrid_warp_style"
+    ],
+    "deployment_artifact_schema_version": 1
   }
 }

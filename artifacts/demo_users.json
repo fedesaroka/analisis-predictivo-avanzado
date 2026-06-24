@@ -1,0 +1,492 @@
+[
+  {
+    "user_index": 1063,
+    "user_id": 52496,
+    "label": "User 52496 — 16 positive titles",
+    "positive_history_count": 16,
+    "recommendations": [
+      {
+        "rank": 1,
+        "item_index": 145,
+        "anime_id": 205,
+        "title": "Samurai Champloo",
+        "genre": "Action, Adventure, Comedy, Historical, Samurai, Shounen",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 2,
+        "item_index": 0,
+        "anime_id": 1,
+        "title": "Cowboy Bebop",
+        "genre": "Action, Adventure, Comedy, Drama, Sci-Fi, Space",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 3,
+        "item_index": 23,
+        "anime_id": 45,
+        "title": "Rurouni Kenshin: Meiji Kenkaku Romantan",
+        "genre": "Action, Adventure, Comedy, Historical, Romance, Samurai",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 4,
+        "item_index": 22,
+        "anime_id": 44,
+        "title": "Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen",
+        "genre": "Action, Drama, Historical, Martial Arts, Romance, Samurai",
+        "type": "OVA",
+        "test_hit": false
+      },
+      {
+        "rank": 5,
+        "item_index": 118,
+        "anime_id": 166,
+        "title": "Samurai 7",
+        "genre": "Historical, Mecha, Samurai, Sci-Fi",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 6,
+        "item_index": 305,
+        "anime_id": 467,
+        "title": "Ghost in the Shell: Stand Alone Complex",
+        "genre": "Action, Mecha, Military, Police, Sci-Fi, Seinen",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 7,
+        "item_index": 97,
+        "anime_id": 139,
+        "title": "Hunter x Hunter: Greed Island Final",
+        "genre": "Action, Adventure, Shounen, Super Power",
+        "type": "OVA",
+        "test_hit": false
+      },
+      {
+        "rank": 8,
+        "item_index": 20,
+        "anime_id": 33,
+        "title": "Berserk",
+        "genre": "Action, Adventure, Demons, Drama, Fantasy, Horror, Military, Romance, Seinen, Supernatural",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 9,
+        "item_index": 278,
+        "anime_id": 430,
+        "title": "Fullmetal Alchemist: The Conqueror of Shamballa",
+        "genre": "Comedy, Drama, Fantasy, Historical, Military, Shounen",
+        "type": "Movie",
+        "test_hit": false
+      },
+      {
+        "rank": 10,
+        "item_index": 46,
+        "anime_id": 72,
+        "title": "Full Metal Panic? Fumoffu",
+        "genre": "Action, Comedy, School",
+        "type": "TV",
+        "test_hit": false
+      }
+    ]
+  },
+  {
+    "user_index": 154,
+    "user_id": 7562,
+    "label": "User 7562 — 30 positive titles",
+    "positive_history_count": 30,
+    "recommendations": [
+      {
+        "rank": 1,
+        "item_index": 9,
+        "anime_id": 20,
+        "title": "Naruto",
+        "genre": "Action, Comedy, Martial Arts, Shounen, Super Power",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 2,
+        "item_index": 134,
+        "anime_id": 189,
+        "title": "Love Hina",
+        "genre": "Comedy, Ecchi, Harem, Romance, Shounen, Slice of Life",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 3,
+        "item_index": 248,
+        "anime_id": 384,
+        "title": "Gantz",
+        "genre": "Action, Drama, Horror, Psychological, Sci-Fi, Supernatural",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 4,
+        "item_index": 45,
+        "anime_id": 71,
+        "title": "Full Metal Panic!",
+        "genre": "Action, Comedy, Mecha, Military, Sci-Fi",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 5,
+        "item_index": 242,
+        "anime_id": 376,
+        "title": "Elfen Lied Special",
+        "genre": "Drama, Ecchi, Horror, Psychological, Supernatural",
+        "type": "Special",
+        "test_hit": false
+      },
+      {
+        "rank": 6,
+        "item_index": 468,
+        "anime_id": 857,
+        "title": "Air Gear",
+        "genre": "Action, Comedy, Ecchi, Shounen, Sports",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 7,
+        "item_index": 156,
+        "anime_id": 225,
+        "title": "Dragon Ball GT",
+        "genre": "Action, Adventure, Comedy, Fantasy, Magic, Sci-Fi, Shounen, Super Power",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 8,
+        "item_index": 1376,
+        "anime_id": 8074,
+        "title": "Highschool of the Dead",
+        "genre": "Action, Ecchi, Horror, Supernatural",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 9,
+        "item_index": 278,
+        "anime_id": 430,
+        "title": "Fullmetal Alchemist: The Conqueror of Shamballa",
+        "genre": "Comedy, Drama, Fantasy, Historical, Military, Shounen",
+        "type": "Movie",
+        "test_hit": false
+      },
+      {
+        "rank": 10,
+        "item_index": 499,
+        "anime_id": 899,
+        "title": "Dragon Ball Z Movie 06: Gekitotsu!! 100-oku Power no Senshi-tachi",
+        "genre": "Adventure, Comedy, Fantasy, Sci-Fi, Shounen",
+        "type": "Movie",
+        "test_hit": false
+      }
+    ]
+  },
+  {
+    "user_index": 901,
+    "user_id": 44465,
+    "label": "User 44465 — 49 positive titles",
+    "positive_history_count": 49,
+    "recommendations": [
+      {
+        "rank": 1,
+        "item_index": 688,
+        "anime_id": 1535,
+        "title": "Death Note",
+        "genre": "Mystery, Police, Psychological, Supernatural, Thriller",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 2,
+        "item_index": 1880,
+        "anime_id": 16498,
+        "title": "Shingeki no Kyojin",
+        "genre": "Action, Drama, Fantasy, Shounen, Super Power",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 3,
+        "item_index": 9,
+        "anime_id": 20,
+        "title": "Naruto",
+        "genre": "Action, Comedy, Martial Arts, Shounen, Super Power",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 4,
+        "item_index": 1666,
+        "anime_id": 11757,
+        "title": "Sword Art Online",
+        "genre": "Action, Adventure, Fantasy, Game, Romance",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 5,
+        "item_index": 157,
+        "anime_id": 226,
+        "title": "Elfen Lied",
+        "genre": "Action, Drama, Horror, Psychological, Romance, Seinen, Supernatural",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 6,
+        "item_index": 1669,
+        "anime_id": 11771,
+        "title": "Kuroko no Basket",
+        "genre": "Comedy, School, Shounen, Sports",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 7,
+        "item_index": 143,
+        "anime_id": 199,
+        "title": "Sen to Chihiro no Kamikakushi",
+        "genre": "Adventure, Drama, Supernatural",
+        "type": "Movie",
+        "test_hit": false
+      },
+      {
+        "rank": 8,
+        "item_index": 0,
+        "anime_id": 1,
+        "title": "Cowboy Bebop",
+        "genre": "Action, Adventure, Comedy, Drama, Sci-Fi, Space",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 9,
+        "item_index": 465,
+        "anime_id": 853,
+        "title": "Ouran Koukou Host Club",
+        "genre": "Comedy, Harem, Romance, School, Shoujo",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 10,
+        "item_index": 761,
+        "anime_id": 1818,
+        "title": "Claymore",
+        "genre": "Action, Adventure, Demons, Fantasy, Shounen, Super Power, Supernatural",
+        "type": "TV",
+        "test_hit": false
+      }
+    ]
+  },
+  {
+    "user_index": 597,
+    "user_id": 30176,
+    "label": "User 30176 — 87 positive titles",
+    "positive_history_count": 87,
+    "recommendations": [
+      {
+        "rank": 1,
+        "item_index": 706,
+        "anime_id": 1575,
+        "title": "Code Geass: Hangyaku no Lelouch",
+        "genre": "Action, Mecha, Military, School, Sci-Fi, Super Power",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 2,
+        "item_index": 798,
+        "anime_id": 2001,
+        "title": "Tengen Toppa Gurren Lagann",
+        "genre": "Action, Adventure, Comedy, Mecha, Sci-Fi",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 3,
+        "item_index": 165,
+        "anime_id": 237,
+        "title": "Eureka Seven",
+        "genre": "Adventure, Drama, Mecha, Romance, Sci-Fi",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 4,
+        "item_index": 688,
+        "anime_id": 1535,
+        "title": "Death Note",
+        "genre": "Mystery, Police, Psychological, Supernatural, Thriller",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 5,
+        "item_index": 1880,
+        "anime_id": 16498,
+        "title": "Shingeki no Kyojin",
+        "genre": "Action, Drama, Fantasy, Shounen, Super Power",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 6,
+        "item_index": 920,
+        "anime_id": 2966,
+        "title": "Ookami to Koushinryou",
+        "genre": "Adventure, Fantasy, Historical, Romance",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 7,
+        "item_index": 906,
+        "anime_id": 2904,
+        "title": "Code Geass: Hangyaku no Lelouch R2",
+        "genre": "Action, Drama, Mecha, Military, Sci-Fi, Super Power",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 8,
+        "item_index": 1165,
+        "anime_id": 5341,
+        "title": "Ookami to Koushinryou II",
+        "genre": "Adventure, Fantasy, Historical, Romance",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 9,
+        "item_index": 0,
+        "anime_id": 1,
+        "title": "Cowboy Bebop",
+        "genre": "Action, Adventure, Comedy, Drama, Sci-Fi, Space",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 10,
+        "item_index": 799,
+        "anime_id": 2002,
+        "title": "Heroic Age",
+        "genre": "Action, Mecha, Military, Sci-Fi, Space",
+        "type": "TV",
+        "test_hit": false
+      }
+    ]
+  },
+  {
+    "user_index": 386,
+    "user_id": 19522,
+    "label": "User 19522 — 263 positive titles",
+    "positive_history_count": 263,
+    "recommendations": [
+      {
+        "rank": 1,
+        "item_index": 1251,
+        "anime_id": 6347,
+        "title": "Baka to Test to Shoukanjuu",
+        "genre": "Comedy, Romance, School, Super Power",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 2,
+        "item_index": 612,
+        "anime_id": 1195,
+        "title": "Zero no Tsukaima",
+        "genre": "Action, Adventure, Comedy, Ecchi, Fantasy, Harem, Magic, Romance, School",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 3,
+        "item_index": 1532,
+        "anime_id": 10110,
+        "title": "Mayo Chiki!",
+        "genre": "Comedy, Ecchi, Harem, Romance, School",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 4,
+        "item_index": 1805,
+        "anime_id": 14811,
+        "title": "GJ-bu",
+        "genre": "Comedy, School, Slice of Life",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 5,
+        "item_index": 980,
+        "anime_id": 3455,
+        "title": "To LOVE-Ru",
+        "genre": "Comedy, Ecchi, Harem, Romance, School, Sci-Fi",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 6,
+        "item_index": 1799,
+        "anime_id": 14741,
+        "title": "Chuunibyou demo Koi ga Shitai!",
+        "genre": "Comedy, Drama, Romance, School, Slice of Life",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 7,
+        "item_index": 1187,
+        "anime_id": 5680,
+        "title": "K-On!",
+        "genre": "Comedy, Music, School, Slice of Life",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 8,
+        "item_index": 1541,
+        "anime_id": 10165,
+        "title": "Nichijou",
+        "genre": "Comedy, School, Slice of Life",
+        "type": "TV",
+        "test_hit": false
+      },
+      {
+        "rank": 9,
+        "item_index": 1835,
+        "anime_id": 15451,
+        "title": "High School DxD New",
+        "genre": "Action, Comedy, Demons, Ecchi, Harem, Romance, School",
+        "type": "TV",
+        "test_hit": true
+      },
+      {
+        "rank": 10,
+        "item_index": 1825,
+        "anime_id": 15225,
+        "title": "Hentai Ouji to Warawanai Neko.",
+        "genre": "Comedy, Harem, Romance, School, Seinen, Supernatural",
+        "type": "TV",
+        "test_hit": false
+      }
+    ]
+  }
+]
