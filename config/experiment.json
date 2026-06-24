@@ -1,4 +1,4 @@
-﻿{
+{
   "experiment_name": "anime_hybrid_pytorch",
   "framework": "pytorch",
   "seed": 42,
@@ -8,8 +8,8 @@
   "maximum_user_positives_before_sampling": 300,
   "minimum_user_positives_after_filtering": 15,
   "minimum_item_users": 5,
-  "validation_fraction": 0.10,
-  "test_fraction": 0.10,
+  "validation_fraction": 0.1,
+  "test_fraction": 0.1,
   "recommendation_k": 10,
   "optuna_trials": 15,
   "device": "cpu",
@@ -22,5 +22,6 @@
     "genre",
     "type"
   ],
-  "primary_metric": "precision_at_10"
+  "primary_metric": "precision_at_10",
+  "sampled_auc_negatives": 100
 }
