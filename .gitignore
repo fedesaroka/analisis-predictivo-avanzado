@@ -1,20 +1,32 @@
-# Data files too large for GitHub (>100MB)
-data/rating.csv
-
-# Script temporal de conversion
-convert_parquet.py
-
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.env
+﻿# Python and Conda environments
 .venv/
 venv/
+env/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
 
 # Jupyter
 .ipynb_checkpoints/
 
-# OS
+# Test and analysis caches
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local configuration and secrets
+.streamlit/secrets.toml
+.env
+
+# Logs
+*.log
+
+# Operating-system files
 .DS_Store
 Thumbs.db
+
+# Temporary artifact generation
+artifacts_staging/

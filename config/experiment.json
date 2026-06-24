@@ -1,0 +1,26 @@
+﻿{
+  "experiment_name": "anime_hybrid_pytorch",
+  "framework": "pytorch",
+  "seed": 42,
+  "positive_rating_threshold": 8,
+  "target_user_count": 1500,
+  "minimum_user_positives_before_sampling": 20,
+  "maximum_user_positives_before_sampling": 300,
+  "minimum_user_positives_after_filtering": 15,
+  "minimum_item_users": 5,
+  "validation_fraction": 0.10,
+  "test_fraction": 0.10,
+  "recommendation_k": 10,
+  "optuna_trials": 15,
+  "device": "cpu",
+  "candidate_objectives": [
+    "logistic",
+    "bpr",
+    "warp_style_hard_negative"
+  ],
+  "item_metadata": [
+    "genre",
+    "type"
+  ],
+  "primary_metric": "precision_at_10"
+}
