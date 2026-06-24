@@ -1,4 +1,4 @@
-﻿"""Streamlit application for the final anime recommender."""
+"""Streamlit application for the final anime recommender."""
 
 from __future__ import annotations
 

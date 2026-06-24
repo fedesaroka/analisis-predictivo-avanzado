@@ -1,4 +1,4 @@
-﻿# Python and Conda environments
+# Python and Conda environments
 .venv/
 venv/
 env/
@@ -30,3 +30,10 @@ Thumbs.db
 
 # Temporary artifact generation
 artifacts_staging/
+
+# Generated Python package and tool metadata
+*.egg-info/
+*.egg-info
+build/
+dist/
+.ruff_cache/
