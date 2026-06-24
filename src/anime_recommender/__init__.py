@@ -1,4 +1,9 @@
-﻿"""Core implementation for the anime recommendation project."""
+"""Core implementation for the anime recommendation project.
+
+The package root intentionally excludes PyTorch-dependent modules.
+Training processes import anime_recommender.training explicitly after
+PyTorch has been initialized.
+"""
 
 from anime_recommender.baselines import (
     content_score_matrix,

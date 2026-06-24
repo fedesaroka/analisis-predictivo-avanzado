@@ -1,4 +1,4 @@
-﻿"""Execute the final notebook while reporting progress by cell."""
+"""Execute the final notebook while reporting progress by cell."""
 
 from __future__ import annotations
 
@@ -107,7 +107,7 @@ def main() -> None:
     )
 
     executor = ProgressExecutePreprocessor(
-        timeout=600,
+        timeout=1800,
         kernel_name="apa-tp2-final",
         allow_errors=False,
         record_timing=True,

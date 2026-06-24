@@ -23,5 +23,18 @@
     "type"
   ],
   "primary_metric": "precision_at_10",
-  "sampled_auc_negatives": 100
+  "sampled_auc_negatives": 100,
+  "default_training": {
+    "latent_dim": 32,
+    "epochs": 8,
+    "batch_size": 4096,
+    "learning_rate": 0.01,
+    "weight_decay": 1e-06,
+    "metadata_weight": 1.0,
+    "negatives_per_positive": 1,
+    "max_sampled": 10,
+    "margin": 1.0,
+    "gradient_clip_norm": 5.0,
+    "scoring_user_batch_size": 128
+  }
 }

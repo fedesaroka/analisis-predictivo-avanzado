@@ -1,0 +1,241 @@
+model,user_index,user_id,rank,item_index,anime_id,title,genre,type,validation_hit
+popularity,0,93,1,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+popularity,0,93,2,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+popularity,0,93,3,1880,16498,Shingeki no Kyojin,"Action, Drama, Fantasy, Shounen, Super Power",TV,False
+popularity,0,93,4,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+popularity,0,93,5,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,False
+popularity,0,93,6,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+popularity,0,93,7,143,199,Sen to Chihiro no Kamikakushi,"Adventure, Drama, Supernatural",Movie,False
+popularity,0,93,8,157,226,Elfen Lied,"Action, Drama, Horror, Psychological, Romance, Seinen, Supernatural",TV,False
+popularity,0,93,9,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+popularity,0,93,10,82,121,Fullmetal Alchemist,"Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen",TV,False
+popularity,749,36560,1,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+popularity,749,36560,2,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+popularity,749,36560,3,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,True
+popularity,749,36560,4,1269,6547,Angel Beats!,"Action, Comedy, Drama, School, Supernatural",TV,False
+popularity,749,36560,5,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+popularity,749,36560,6,143,199,Sen to Chihiro no Kamikakushi,"Adventure, Drama, Supernatural",Movie,False
+popularity,749,36560,7,157,226,Elfen Lied,"Action, Drama, Horror, Psychological, Romance, Seinen, Supernatural",TV,False
+popularity,749,36560,8,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+popularity,749,36560,9,82,121,Fullmetal Alchemist,"Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen",TV,False
+popularity,749,36560,10,1453,9253,Steins;Gate,"Sci-Fi, Thriller",TV,False
+popularity,1497,73461,1,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+popularity,1497,73461,2,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+popularity,1497,73461,3,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,False
+popularity,1497,73461,4,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+popularity,1497,73461,5,143,199,Sen to Chihiro no Kamikakushi,"Adventure, Drama, Supernatural",Movie,False
+popularity,1497,73461,6,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+popularity,1497,73461,7,82,121,Fullmetal Alchemist,"Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen",TV,False
+popularity,1497,73461,8,1453,9253,Steins;Gate,"Sci-Fi, Thriller",TV,False
+popularity,1497,73461,9,1059,4181,Clannad: After Story,"Drama, Fantasy, Romance, Slice of Life, Supernatural",TV,False
+popularity,1497,73461,10,2016,19815,No Game No Life,"Adventure, Comedy, Ecchi, Fantasy, Game, Supernatural",TV,False
+content,0,93,1,989,3503,Kanokon,"Comedy, Ecchi, Harem, Romance, School, Shounen, Slice of Life, Supernatural",TV,False
+content,0,93,2,1980,18897,Nisekoi,"Comedy, Harem, Romance, School, Shounen",TV,False
+content,0,93,3,2246,27787,Nisekoi:,"Comedy, Harem, Romance, School, Shounen",TV,False
+content,0,93,4,983,3464,Kemeko Deluxe!,"Action, Comedy, Ecchi, Romance, School, Sci-Fi, Shounen",TV,False
+content,0,93,5,2328,30544,Gakusen Toshi Asterisk,"Action, Comedy, Ecchi, Fantasy, Harem, Romance, School, Sci-Fi, Supernatural",TV,False
+content,0,93,6,1764,13663,To LOVE-Ru Darkness,"Comedy, Ecchi, Harem, Romance, School, Sci-Fi, Shounen",TV,False
+content,0,93,7,2292,28979,To LOVE-Ru Darkness 2nd,"Comedy, Ecchi, Harem, Romance, School, Sci-Fi, Shounen",TV,False
+content,0,93,8,2128,22865,Rokujouma no Shinryakusha!? (TV),"Comedy, Harem, Romance, School, Supernatural",TV,False
+content,0,93,9,2206,25159,Inou-Battle wa Nichijou-kei no Naka de,"Comedy, Romance, School, Slice of Life, Supernatural",TV,False
+content,0,93,10,11,24,School Rumble,"Comedy, Romance, School, Shounen",TV,False
+content,749,36560,1,996,3588,Soul Eater,"Action, Adventure, Comedy, Fantasy, Shounen, Supernatural",TV,False
+content,749,36560,2,2049,20853,Hitsugi no Chaika,"Action, Adventure, Comedy, Fantasy, Romance, Shounen",TV,False
+content,749,36560,3,2173,24231,Hitsugi no Chaika: Avenging Battle,"Action, Adventure, Comedy, Fantasy, Romance, Shounen",TV,False
+content,749,36560,4,689,1536,Busou Renkin,"Action, Comedy, Fantasy, School, Shounen, Supernatural",TV,False
+content,749,36560,5,420,738,MÄR,"Action, Adventure, Comedy, Fantasy, Shounen",TV,False
+content,749,36560,6,1413,8624,Digimon Xros Wars,"Action, Adventure, Comedy, Fantasy, Shounen",TV,False
+content,749,36560,7,1521,10033,Toriko,"Action, Adventure, Comedy, Fantasy, Shounen",TV,False
+content,749,36560,8,1007,3655,Nabari no Ou,"Action, Comedy, Drama, Fantasy, Shounen, Supernatural",TV,False
+content,749,36560,9,175,249,InuYasha,"Action, Adventure, Comedy, Demons, Fantasy, Magic, Romance, Shounen, Supernatural",TV,False
+content,749,36560,10,1300,6811,InuYasha: Kanketsu-hen,"Action, Adventure, Comedy, Demons, Fantasy, Magic, Romance, Shounen, Supernatural",TV,False
+content,1497,73461,1,2328,30544,Gakusen Toshi Asterisk,"Action, Comedy, Ecchi, Fantasy, Harem, Romance, School, Sci-Fi, Supernatural",TV,False
+content,1497,73461,2,2129,22877,Seirei Tsukai no Blade Dance,"Action, Comedy, Ecchi, Fantasy, Harem, Romance, School, Supernatural",TV,False
+content,1497,73461,3,2205,25157,Trinity Seven,"Action, Comedy, Ecchi, Fantasy, Harem, Magic, Romance, School, Shounen, Supernatural",TV,False
+content,1497,73461,4,983,3464,Kemeko Deluxe!,"Action, Comedy, Ecchi, Romance, School, Sci-Fi, Shounen",TV,False
+content,1497,73461,5,2049,20853,Hitsugi no Chaika,"Action, Adventure, Comedy, Fantasy, Romance, Shounen",TV,False
+content,1497,73461,6,2173,24231,Hitsugi no Chaika: Avenging Battle,"Action, Adventure, Comedy, Fantasy, Romance, Shounen",TV,False
+content,1497,73461,7,1014,3712,Zero no Tsukaima: Princesses no Rondo,"Action, Adventure, Comedy, Ecchi, Fantasy, Harem, Magic, Romance, School",TV,True
+content,1497,73461,8,2259,28121,Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka,"Action, Adventure, Comedy, Fantasy, Romance",TV,False
+content,1497,73461,9,2191,24705,"Ore, Twintail ni Narimasu.","Action, Comedy, Fantasy, Romance, School, Shounen",TV,False
+content,1497,73461,10,1414,8630,Hidan no Aria,"Action, Comedy, Romance, School",TV,False
+collaborative_logistic,0,93,1,1799,14741,Chuunibyou demo Koi ga Shitai!,"Comedy, Drama, Romance, School, Slice of Life",TV,False
+collaborative_logistic,0,93,2,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,True
+collaborative_logistic,0,93,3,1407,8525,Kami nomi zo Shiru Sekai,"Comedy, Harem, Romance, Shounen, Supernatural",TV,False
+collaborative_logistic,0,93,4,1980,18897,Nisekoi,"Comedy, Harem, Romance, School, Shounen",TV,False
+collaborative_logistic,0,93,5,1643,11319,Zero no Tsukaima F,"Adventure, Ecchi, Fantasy, Magic, Romance",TV,False
+collaborative_logistic,0,93,6,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+collaborative_logistic,0,93,7,1806,14813,Yahari Ore no Seishun Love Comedy wa Machigatteiru.,"Comedy, Drama, Romance, School",TV,False
+collaborative_logistic,0,93,8,1422,8769,Ore no Imouto ga Konnani Kawaii Wake ga Nai,"Comedy, Seinen, Slice of Life",TV,False
+collaborative_logistic,0,93,9,1655,11617,High School DxD,"Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+collaborative_logistic,0,93,10,2032,20507,Noragami,"Action, Adventure, Shounen, Supernatural",TV,False
+collaborative_logistic,749,36560,1,1269,6547,Angel Beats!,"Action, Comedy, Drama, School, Supernatural",TV,False
+collaborative_logistic,749,36560,2,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+collaborative_logistic,749,36560,3,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,True
+collaborative_logistic,749,36560,4,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+collaborative_logistic,749,36560,5,1628,11111,Another,"Horror, Mystery, School, Supernatural, Thriller",TV,False
+collaborative_logistic,749,36560,6,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+collaborative_logistic,749,36560,7,1453,9253,Steins;Gate,"Sci-Fi, Thriller",TV,False
+collaborative_logistic,749,36560,8,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+collaborative_logistic,749,36560,9,1499,9919,Ao no Exorcist,"Action, Demons, Fantasy, Shounen, Supernatural",TV,False
+collaborative_logistic,749,36560,10,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,False
+collaborative_logistic,1497,73461,1,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+collaborative_logistic,1497,73461,2,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,False
+collaborative_logistic,1497,73461,3,82,121,Fullmetal Alchemist,"Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen",TV,False
+collaborative_logistic,1497,73461,4,462,849,Suzumiya Haruhi no Yuuutsu,"Comedy, Mystery, Parody, School, Sci-Fi, Slice of Life",TV,False
+collaborative_logistic,1497,73461,5,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+collaborative_logistic,1497,73461,6,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+collaborative_logistic,1497,73461,7,45,71,Full Metal Panic!,"Action, Comedy, Mecha, Military, Sci-Fi",TV,False
+collaborative_logistic,1497,73461,8,232,355,Shakugan no Shana,"Action, Drama, Fantasy, Romance, School, Supernatural",TV,False
+collaborative_logistic,1497,73461,9,233,356,Fate/stay night,"Action, Fantasy, Magic, Romance, Supernatural",TV,False
+collaborative_logistic,1497,73461,10,803,2025,Darker than Black: Kuro no Keiyakusha,"Action, Mystery, Sci-Fi, Super Power",TV,False
+collaborative_bpr,0,93,1,1799,14741,Chuunibyou demo Koi ga Shitai!,"Comedy, Drama, Romance, School, Slice of Life",TV,False
+collaborative_bpr,0,93,2,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,True
+collaborative_bpr,0,93,3,1993,19221,"Ore no Nounai Sentakushi ga, Gakuen Love Comedy wo Zenryoku de Jama Shiteiru","Comedy, Romance, School",TV,False
+collaborative_bpr,0,93,4,1643,11319,Zero no Tsukaima F,"Adventure, Ecchi, Fantasy, Magic, Romance",TV,False
+collaborative_bpr,0,93,5,1407,8525,Kami nomi zo Shiru Sekai,"Comedy, Harem, Romance, Shounen, Supernatural",TV,False
+collaborative_bpr,0,93,6,1980,18897,Nisekoi,"Comedy, Harem, Romance, School, Shounen",TV,False
+collaborative_bpr,0,93,7,1806,14813,Yahari Ore no Seishun Love Comedy wa Machigatteiru.,"Comedy, Drama, Romance, School",TV,False
+collaborative_bpr,0,93,8,1422,8769,Ore no Imouto ga Konnani Kawaii Wake ga Nai,"Comedy, Seinen, Slice of Life",TV,False
+collaborative_bpr,0,93,9,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+collaborative_bpr,0,93,10,1655,11617,High School DxD,"Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+collaborative_bpr,749,36560,1,1269,6547,Angel Beats!,"Action, Comedy, Drama, School, Supernatural",TV,False
+collaborative_bpr,749,36560,2,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+collaborative_bpr,749,36560,3,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,True
+collaborative_bpr,749,36560,4,1453,9253,Steins;Gate,"Sci-Fi, Thriller",TV,False
+collaborative_bpr,749,36560,5,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+collaborative_bpr,749,36560,6,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,False
+collaborative_bpr,749,36560,7,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+collaborative_bpr,749,36560,8,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+collaborative_bpr,749,36560,9,1628,11111,Another,"Horror, Mystery, School, Supernatural, Thriller",TV,False
+collaborative_bpr,749,36560,10,1499,9919,Ao no Exorcist,"Action, Demons, Fantasy, Shounen, Supernatural",TV,False
+collaborative_bpr,1497,73461,1,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+collaborative_bpr,1497,73461,2,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,False
+collaborative_bpr,1497,73461,3,462,849,Suzumiya Haruhi no Yuuutsu,"Comedy, Mystery, Parody, School, Sci-Fi, Slice of Life",TV,False
+collaborative_bpr,1497,73461,4,232,355,Shakugan no Shana,"Action, Drama, Fantasy, Romance, School, Supernatural",TV,False
+collaborative_bpr,1497,73461,5,45,71,Full Metal Panic!,"Action, Comedy, Mecha, Military, Sci-Fi",TV,False
+collaborative_bpr,1497,73461,6,82,121,Fullmetal Alchemist,"Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen",TV,False
+collaborative_bpr,1497,73461,7,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+collaborative_bpr,1497,73461,8,233,356,Fate/stay night,"Action, Fantasy, Magic, Romance, Supernatural",TV,False
+collaborative_bpr,1497,73461,9,1376,8074,Highschool of the Dead,"Action, Ecchi, Horror, Supernatural",TV,False
+collaborative_bpr,1497,73461,10,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+collaborative_warp_style,0,93,1,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,True
+collaborative_warp_style,0,93,2,1799,14741,Chuunibyou demo Koi ga Shitai!,"Comedy, Drama, Romance, School, Slice of Life",TV,False
+collaborative_warp_style,0,93,3,1643,11319,Zero no Tsukaima F,"Adventure, Ecchi, Fantasy, Magic, Romance",TV,False
+collaborative_warp_style,0,93,4,2035,20541,Mikakunin de Shinkoukei,"Comedy, Romance, School, Slice of Life",TV,False
+collaborative_warp_style,0,93,5,1800,14749,Ore no Kanojo to Osananajimi ga Shuraba Sugiru,"Comedy, Harem, Romance, School",TV,False
+collaborative_warp_style,0,93,6,1806,14813,Yahari Ore no Seishun Love Comedy wa Machigatteiru.,"Comedy, Drama, Romance, School",TV,False
+collaborative_warp_style,0,93,7,1993,19221,"Ore no Nounai Sentakushi ga, Gakuen Love Comedy wo Zenryoku de Jama Shiteiru","Comedy, Romance, School",TV,False
+collaborative_warp_style,0,93,8,1763,13659,Ore no Imouto ga Konnani Kawaii Wake ga Nai.,"Comedy, Seinen, Slice of Life",TV,False
+collaborative_warp_style,0,93,9,1969,18671,Chuunibyou demo Koi ga Shitai! Ren,"Comedy, Drama, Romance, School, Slice of Life",TV,True
+collaborative_warp_style,0,93,10,1407,8525,Kami nomi zo Shiru Sekai,"Comedy, Harem, Romance, Shounen, Supernatural",TV,False
+collaborative_warp_style,749,36560,1,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+collaborative_warp_style,749,36560,2,1453,9253,Steins;Gate,"Sci-Fi, Thriller",TV,False
+collaborative_warp_style,749,36560,3,1269,6547,Angel Beats!,"Action, Comedy, Drama, School, Supernatural",TV,False
+collaborative_warp_style,749,36560,4,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+collaborative_warp_style,749,36560,5,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,True
+collaborative_warp_style,749,36560,6,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+collaborative_warp_style,749,36560,7,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+collaborative_warp_style,749,36560,8,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+collaborative_warp_style,749,36560,9,1513,9989,Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.,"Drama, Slice of Life, Supernatural",TV,False
+collaborative_warp_style,749,36560,10,2315,30276,One Punch Man,"Action, Comedy, Parody, Sci-Fi, Seinen, Super Power, Supernatural",TV,False
+collaborative_warp_style,1497,73461,1,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+collaborative_warp_style,1497,73461,2,462,849,Suzumiya Haruhi no Yuuutsu,"Comedy, Mystery, Parody, School, Sci-Fi, Slice of Life",TV,False
+collaborative_warp_style,1497,73461,3,82,121,Fullmetal Alchemist,"Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen",TV,False
+collaborative_warp_style,1497,73461,4,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,False
+collaborative_warp_style,1497,73461,5,143,199,Sen to Chihiro no Kamikakushi,"Adventure, Drama, Supernatural",Movie,False
+collaborative_warp_style,1497,73461,6,1376,8074,Highschool of the Dead,"Action, Ecchi, Horror, Supernatural",TV,False
+collaborative_warp_style,1497,73461,7,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+collaborative_warp_style,1497,73461,8,996,3588,Soul Eater,"Action, Adventure, Comedy, Fantasy, Shounen, Supernatural",TV,False
+collaborative_warp_style,1497,73461,9,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+collaborative_warp_style,1497,73461,10,490,889,Black Lagoon,"Action, Seinen",TV,False
+hybrid_logistic,0,93,1,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,True
+hybrid_logistic,0,93,2,1655,11617,High School DxD,"Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+hybrid_logistic,0,93,3,1980,18897,Nisekoi,"Comedy, Harem, Romance, School, Shounen",TV,False
+hybrid_logistic,0,93,4,1407,8525,Kami nomi zo Shiru Sekai,"Comedy, Harem, Romance, Shounen, Supernatural",TV,False
+hybrid_logistic,0,93,5,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+hybrid_logistic,0,93,6,1799,14741,Chuunibyou demo Koi ga Shitai!,"Comedy, Drama, Romance, School, Slice of Life",TV,False
+hybrid_logistic,0,93,7,2315,30276,One Punch Man,"Action, Comedy, Parody, Sci-Fi, Seinen, Super Power, Supernatural",TV,False
+hybrid_logistic,0,93,8,1835,15451,High School DxD New,"Action, Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+hybrid_logistic,0,93,9,189,269,Bleach,"Action, Comedy, Shounen, Super Power, Supernatural",TV,False
+hybrid_logistic,0,93,10,2032,20507,Noragami,"Action, Adventure, Shounen, Supernatural",TV,False
+hybrid_logistic,749,36560,1,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+hybrid_logistic,749,36560,2,1269,6547,Angel Beats!,"Action, Comedy, Drama, School, Supernatural",TV,False
+hybrid_logistic,749,36560,3,9,20,Naruto,"Action, Comedy, Martial Arts, Shounen, Super Power",TV,False
+hybrid_logistic,749,36560,4,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+hybrid_logistic,749,36560,5,1499,9919,Ao no Exorcist,"Action, Demons, Fantasy, Shounen, Supernatural",TV,False
+hybrid_logistic,749,36560,6,1628,11111,Another,"Horror, Mystery, School, Supernatural, Thriller",TV,False
+hybrid_logistic,749,36560,7,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,False
+hybrid_logistic,749,36560,8,1784,14345,Btooom!,"Action, Psychological, Sci-Fi, Seinen",TV,False
+hybrid_logistic,749,36560,9,2315,30276,One Punch Man,"Action, Comedy, Parody, Sci-Fi, Seinen, Super Power, Supernatural",TV,False
+hybrid_logistic,749,36560,10,157,226,Elfen Lied,"Action, Drama, Horror, Psychological, Romance, Seinen, Supernatural",TV,False
+hybrid_logistic,1497,73461,1,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+hybrid_logistic,1497,73461,2,926,2993,Rosario to Vampire,"Comedy, Ecchi, Fantasy, Harem, Romance, School, Shounen, Vampire",TV,False
+hybrid_logistic,1497,73461,3,1376,8074,Highschool of the Dead,"Action, Ecchi, Horror, Supernatural",TV,False
+hybrid_logistic,1497,73461,4,1407,8525,Kami nomi zo Shiru Sekai,"Comedy, Harem, Romance, Shounen, Supernatural",TV,False
+hybrid_logistic,1497,73461,5,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+hybrid_logistic,1497,73461,6,35,59,Chobits,"Comedy, Drama, Ecchi, Romance, Sci-Fi, Seinen",TV,False
+hybrid_logistic,1497,73461,7,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+hybrid_logistic,1497,73461,8,462,849,Suzumiya Haruhi no Yuuutsu,"Comedy, Mystery, Parody, School, Sci-Fi, Slice of Life",TV,False
+hybrid_logistic,1497,73461,9,920,2966,Ookami to Koushinryou,"Adventure, Fantasy, Historical, Romance",TV,False
+hybrid_logistic,1497,73461,10,1268,6512,Nyan Koi!,"Comedy, Harem, Romance",TV,False
+hybrid_bpr,0,93,1,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,True
+hybrid_bpr,0,93,2,1655,11617,High School DxD,"Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+hybrid_bpr,0,93,3,1407,8525,Kami nomi zo Shiru Sekai,"Comedy, Harem, Romance, Shounen, Supernatural",TV,False
+hybrid_bpr,0,93,4,1980,18897,Nisekoi,"Comedy, Harem, Romance, School, Shounen",TV,False
+hybrid_bpr,0,93,5,1799,14741,Chuunibyou demo Koi ga Shitai!,"Comedy, Drama, Romance, School, Slice of Life",TV,False
+hybrid_bpr,0,93,6,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+hybrid_bpr,0,93,7,1244,6213,Toaru Kagaku no Railgun,"Action, Sci-Fi, Super Power",TV,False
+hybrid_bpr,0,93,8,1671,11785,Haiyore! Nyaruko-san,"Comedy, Parody, Sci-Fi",TV,False
+hybrid_bpr,0,93,9,1835,15451,High School DxD New,"Action, Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+hybrid_bpr,0,93,10,2315,30276,One Punch Man,"Action, Comedy, Parody, Sci-Fi, Seinen, Super Power, Supernatural",TV,False
+hybrid_bpr,749,36560,1,1269,6547,Angel Beats!,"Action, Comedy, Drama, School, Supernatural",TV,False
+hybrid_bpr,749,36560,2,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+hybrid_bpr,749,36560,3,9,20,Naruto,"Action, Comedy, Martial Arts, Shounen, Super Power",TV,False
+hybrid_bpr,749,36560,4,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+hybrid_bpr,749,36560,5,1499,9919,Ao no Exorcist,"Action, Demons, Fantasy, Shounen, Supernatural",TV,False
+hybrid_bpr,749,36560,6,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,False
+hybrid_bpr,749,36560,7,157,226,Elfen Lied,"Action, Drama, Horror, Psychological, Romance, Seinen, Supernatural",TV,False
+hybrid_bpr,749,36560,8,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+hybrid_bpr,749,36560,9,1784,14345,Btooom!,"Action, Psychological, Sci-Fi, Seinen",TV,False
+hybrid_bpr,749,36560,10,2315,30276,One Punch Man,"Action, Comedy, Parody, Sci-Fi, Seinen, Super Power, Supernatural",TV,False
+hybrid_bpr,1497,73461,1,1376,8074,Highschool of the Dead,"Action, Ecchi, Horror, Supernatural",TV,False
+hybrid_bpr,1497,73461,2,926,2993,Rosario to Vampire,"Comedy, Ecchi, Fantasy, Harem, Romance, School, Shounen, Vampire",TV,False
+hybrid_bpr,1497,73461,3,1407,8525,Kami nomi zo Shiru Sekai,"Comedy, Harem, Romance, Shounen, Supernatural",TV,False
+hybrid_bpr,1497,73461,4,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+hybrid_bpr,1497,73461,5,1014,3712,Zero no Tsukaima: Princesses no Rondo,"Action, Adventure, Comedy, Ecchi, Fantasy, Harem, Magic, Romance, School",TV,True
+hybrid_bpr,1497,73461,6,1268,6512,Nyan Koi!,"Comedy, Harem, Romance",TV,False
+hybrid_bpr,1497,73461,7,35,59,Chobits,"Comedy, Drama, Ecchi, Romance, Sci-Fi, Seinen",TV,False
+hybrid_bpr,1497,73461,8,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+hybrid_bpr,1497,73461,9,1065,4214,Rosario to Vampire Capu2,"Comedy, Ecchi, Fantasy, Harem, Romance, School, Vampire",TV,False
+hybrid_bpr,1497,73461,10,232,355,Shakugan no Shana,"Action, Drama, Fantasy, Romance, School, Supernatural",TV,False
+hybrid_warp_style,0,93,1,1850,15809,Hataraku Maou-sama!,"Comedy, Demons, Fantasy, Romance, Shounen",TV,True
+hybrid_warp_style,0,93,2,1407,8525,Kami nomi zo Shiru Sekai,"Comedy, Harem, Romance, Shounen, Supernatural",TV,False
+hybrid_warp_style,0,93,3,1844,15699,Haiyore! Nyaruko-san W,"Comedy, Parody, Sci-Fi",TV,False
+hybrid_warp_style,0,93,4,1835,15451,High School DxD New,"Action, Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+hybrid_warp_style,0,93,5,1671,11785,Haiyore! Nyaruko-san,"Comedy, Parody, Sci-Fi",TV,False
+hybrid_warp_style,0,93,6,1980,18897,Nisekoi,"Comedy, Harem, Romance, School, Shounen",TV,False
+hybrid_warp_style,0,93,7,2020,20031,D-Frag!,"Comedy, Game, School, Seinen",TV,False
+hybrid_warp_style,0,93,8,1655,11617,High School DxD,"Comedy, Demons, Ecchi, Harem, Romance, School",TV,False
+hybrid_warp_style,0,93,9,1826,15315,Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?,"Comedy, Fantasy, Supernatural",TV,False
+hybrid_warp_style,0,93,10,2048,20847,Seitokai Yakuindomo*,"Comedy, School, Shounen, Slice of Life",TV,False
+hybrid_warp_style,749,36560,1,688,1535,Death Note,"Mystery, Police, Psychological, Supernatural, Thriller",TV,False
+hybrid_warp_style,749,36560,2,9,20,Naruto,"Action, Comedy, Martial Arts, Shounen, Super Power",TV,False
+hybrid_warp_style,749,36560,3,1590,10620,Mirai Nikki (TV),"Action, Mystery, Psychological, Shounen, Supernatural, Thriller",TV,False
+hybrid_warp_style,749,36560,4,1269,6547,Angel Beats!,"Action, Comedy, Drama, School, Supernatural",TV,False
+hybrid_warp_style,749,36560,5,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,True
+hybrid_warp_style,749,36560,6,1628,11111,Another,"Horror, Mystery, School, Supernatural, Thriller",TV,False
+hybrid_warp_style,749,36560,7,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
+hybrid_warp_style,749,36560,8,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+hybrid_warp_style,749,36560,9,1289,6746,Durarara!!,"Action, Mystery, Supernatural",TV,False
+hybrid_warp_style,749,36560,10,1499,9919,Ao no Exorcist,"Action, Demons, Fantasy, Shounen, Supernatural",TV,False
+hybrid_warp_style,1497,73461,1,706,1575,Code Geass: Hangyaku no Lelouch,"Action, Mecha, Military, School, Sci-Fi, Super Power",TV,False
+hybrid_warp_style,1497,73461,2,1376,8074,Highschool of the Dead,"Action, Ecchi, Horror, Supernatural",TV,False
+hybrid_warp_style,1497,73461,3,798,2001,Tengen Toppa Gurren Lagann,"Action, Adventure, Comedy, Mecha, Sci-Fi",TV,False
+hybrid_warp_style,1497,73461,4,1066,4224,Toradora!,"Comedy, Romance, School, Slice of Life",TV,False
+hybrid_warp_style,1497,73461,5,829,2167,Clannad,"Comedy, Drama, Romance, School, Slice of Life, Supernatural",TV,False
+hybrid_warp_style,1497,73461,6,82,121,Fullmetal Alchemist,"Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen",TV,False
+hybrid_warp_style,1497,73461,7,906,2904,Code Geass: Hangyaku no Lelouch R2,"Action, Drama, Mecha, Military, Sci-Fi, Super Power",TV,False
+hybrid_warp_style,1497,73461,8,1059,4181,Clannad: After Story,"Drama, Fantasy, Romance, Slice of Life, Supernatural",TV,False
+hybrid_warp_style,1497,73461,9,462,849,Suzumiya Haruhi no Yuuutsu,"Comedy, Mystery, Parody, School, Sci-Fi, Slice of Life",TV,False
+hybrid_warp_style,1497,73461,10,1140,5114,Fullmetal Alchemist: Brotherhood,"Action, Adventure, Drama, Fantasy, Magic, Military, Shounen",TV,False
