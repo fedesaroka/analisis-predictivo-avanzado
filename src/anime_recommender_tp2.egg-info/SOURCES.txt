@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/anime_recommender/__init__.py
+src/anime_recommender/config.py
+src/anime_recommender/data.py
+src/anime_recommender_tp2.egg-info/PKG-INFO
+src/anime_recommender_tp2.egg-info/SOURCES.txt
+src/anime_recommender_tp2.egg-info/dependency_links.txt
+src/anime_recommender_tp2.egg-info/top_level.txt
